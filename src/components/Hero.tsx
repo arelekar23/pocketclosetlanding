@@ -10,7 +10,17 @@ export const Hero = () => {
             <div className="inline-block mb-4 px-4 py-2 bg-gray-50 rounded-full border border-[#D946EF]">
               <span className="text-gray-800 font-semibold">Coming Soon to App Store</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <h1 
+              style={{
+                backgroundImage: "url('/lovable-uploads/01e31cae-462b-47f0-a3ec-71751b556c5e.png')",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
+              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            >
               Your Personal AI Stylist & Closet Optimizer
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">
