@@ -20,7 +20,7 @@ const features = [
 
 export const Features = () => {
   return (
-    <div className="py-20 bg-secondary/20">
+    <div className="pb-20 bg-secondary/20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
