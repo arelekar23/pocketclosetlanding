@@ -17,15 +17,15 @@ export const SocialCloset = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl transform rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
             <div className="relative bg-white p-4 md:p-8 rounded-2xl shadow-xl">
               <div className="flex flex-col items-center space-y-4 md:space-y-6">
-                <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-                  <div className="w-full md:w-48 h-48 rounded-lg overflow-hidden">
+                <div className="flex items-center space-x-4">
+                  <div className="w-32 h-32 md:w-48 md:h-48 rounded-lg overflow-hidden">
                     <img 
                       src="/lovable-uploads/0cf1a32b-ecba-4534-a281-5a353cd4752f.png" 
                       alt="Luxury pink closet" 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="w-full md:w-48 h-48 rounded-lg overflow-hidden">
+                  <div className="w-32 h-32 md:w-48 md:h-48 rounded-lg overflow-hidden">
                     <img 
                       src="/lovable-uploads/3eebf933-a4c8-4b20-a87e-90b2583b9e37.png" 
                       alt="Modern organized closet" 
