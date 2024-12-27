@@ -8,7 +8,7 @@ export const Hero = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 animate-fade-up">
             <div className="inline-block mb-4 px-4 py-2 bg-gray-50 rounded-full border border-gray-200">
-              <span className="text-gray-800 font-semibold">AI-Powered Closet Maximizer</span>
+              <span className="text-gray-800 font-semibold">Coming Soon to App Store</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-gray-900">
               Your Personal AI Stylist & Closet Optimizer
