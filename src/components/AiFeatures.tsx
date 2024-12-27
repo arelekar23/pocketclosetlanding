@@ -75,7 +75,7 @@ export const AiFeatures = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-3 bg-white p-8 rounded-3xl shadow-lg space-y-6 mx-8">
+          <div className="lg:col-span-3 bg-white p-8 rounded-3xl shadow-lg space-y-6">
             <div className="flex items-center justify-between">
               <h3 className="text-2xl font-bold text-neutral">AI Insights</h3>
               <Sparkles className="w-6 h-6 text-primary" />
