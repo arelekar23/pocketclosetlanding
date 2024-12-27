@@ -69,10 +69,19 @@ export default {
             opacity: "1",
           },
         },
+        "scan": {
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translateY(100%)",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
+        "scan": "scan 2s linear infinite",
       },
     },
   },
