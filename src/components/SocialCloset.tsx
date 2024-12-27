@@ -17,15 +17,20 @@ export const SocialCloset = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl transform rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
             <div className="relative bg-white p-8 rounded-2xl shadow-xl">
               <div className="flex flex-col items-center space-y-6">
-                <div className="flex -space-x-4">
-                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Users className="w-8 h-8 text-primary" />
+                <div className="flex items-center space-x-4">
+                  <div className="w-48 h-48 rounded-lg overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/0cf1a32b-ecba-4534-a281-5a353cd4752f.png" 
+                      alt="Luxury pink closet" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Share2 className="w-8 h-8 text-accent" />
-                  </div>
-                  <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center">
-                    <ShoppingCart className="w-8 h-8 text-primary" />
+                  <div className="w-48 h-48 rounded-lg overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/3eebf933-a4c8-4b20-a87e-90b2583b9e37.png" 
+                      alt="Modern organized closet" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900">Your Style Circle</h3>
@@ -76,6 +81,7 @@ export const SocialCloset = () => {
               </div>
             </div>
           </div>
+
         </div>
 
         <div className="relative">
