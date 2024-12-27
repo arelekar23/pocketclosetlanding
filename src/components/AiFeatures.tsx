@@ -2,7 +2,7 @@ import { Upload, Search, Tags, Brain, Camera, Smartphone, Sparkles } from "lucid
 
 export const AiFeatures = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-12 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
