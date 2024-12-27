@@ -13,10 +13,12 @@ export const AiFeatures = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          {/* Left Column */}
+          <div className="flex flex-col gap-8">
+            {/* Main Image Card */}
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
-              <div className="relative h-96">
+              <div className="relative h-[500px] lg:h-[600px]">
                 <img
                   src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
                   alt="Sparkly silver dress"
@@ -37,10 +39,11 @@ export const AiFeatures = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+            {/* Feature Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-neutral">Visual Search</h3>
+                  <h3 className="text-xl font-bold text-neutral">Visual Search</h3>
                   <Search className="w-6 h-6 text-primary" />
                 </div>
                 <div className="space-y-4">
@@ -55,9 +58,9 @@ export const AiFeatures = () => {
                 </div>
               </div>
 
-              <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-neutral">Easy Upload</h3>
+                  <h3 className="text-xl font-bold text-neutral">Easy Upload</h3>
                   <div className="flex gap-3">
                     <Camera className="w-6 h-6 text-primary" />
                     <Upload className="w-6 h-6 text-primary" />
@@ -75,7 +78,8 @@ export const AiFeatures = () => {
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-3xl shadow-lg space-y-6">
+          {/* Right Column - AI Insights */}
+          <div className="bg-white p-8 rounded-3xl shadow-lg space-y-6 h-fit lg:sticky lg:top-8">
             <div className="flex items-center justify-between">
               <h3 className="text-2xl font-bold text-neutral">AI Insights</h3>
               <Sparkles className="w-6 h-6 text-primary" />
