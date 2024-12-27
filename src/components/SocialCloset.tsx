@@ -75,7 +75,7 @@ export const SocialCloset = () => {
                   <Share2 className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-2">Rent & Buy</h4>
+                  <h4 className="text-lg font-semibold mb-2">Rent, Buy & Sell</h4>
                   <p className="text-gray-600">Easily rent or purchase items from your circle. Sustainable fashion that's good for your wallet and the planet.</p>
                 </div>
               </div>
