@@ -18,8 +18,8 @@ export const AiFeatures = () => {
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
               <div className="relative h-96">
                 <img
-                  src="/lovable-uploads/a230156a-dc57-4e30-af84-ebc8b57e1d29.png"
-                  alt="Smart wardrobe organization"
+                  src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
+                  alt="Sparkly silver dress"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
