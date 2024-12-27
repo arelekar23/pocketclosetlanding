@@ -15,7 +15,7 @@ export const AiFeatures = () => {
           <div className="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
             <div className="relative mb-8">
               <img
-                src="/lovable-uploads/92d4af72-bed0-4d37-945b-732b0821f80c.png"
+                src="/lovable-uploads/39687beb-bb85-4ee8-8892-a6a81220aea6.png"
                 alt="AI-powered closet organization"
                 className="w-full h-64 object-cover rounded-xl"
               />
@@ -23,7 +23,7 @@ export const AiFeatures = () => {
               <div className="absolute bottom-4 left-4 flex gap-2">
                 <span className="px-3 py-1 bg-white/90 rounded-full text-sm font-medium">Dress</span>
                 <span className="px-3 py-1 bg-white/90 rounded-full text-sm font-medium">Formal</span>
-                <span className="px-3 py-1 bg-white/90 rounded-full text-sm font-medium">Red</span>
+                <span className="px-3 py-1 bg-white/90 rounded-full text-sm font-medium">Sparkly</span>
               </div>
             </div>
             <h3 className="text-2xl font-bold mb-4">Smart Tagging</h3>
@@ -39,7 +39,7 @@ export const AiFeatures = () => {
           <div className="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
             <div className="relative mb-8">
               <img
-                src="/lovable-uploads/b5f1f65e-8bdf-49cc-8d1d-ae3869a01a3b.png"
+                src="/lovable-uploads/49e5c880-6add-46de-8743-bf63154a4e16.png"
                 alt="Multiple ways to upload"
                 className="w-full h-64 object-cover rounded-xl"
               />
@@ -69,15 +69,15 @@ export const AiFeatures = () => {
           </div>
           <div className="space-y-4">
             <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-              <span className="text-gray-600">"Show me all my red dresses"</span>
+              <span className="text-gray-600">"Show me all my sparkly dresses"</span>
               <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">3 items found</span>
             </div>
             <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-              <span className="text-gray-600">"What can I wear to a summer wedding?"</span>
+              <span className="text-gray-600">"What can I wear to a winter party?"</span>
               <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">5 suggestions</span>
             </div>
             <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-              <span className="text-gray-600">"Find my blue jeans with rips"</span>
+              <span className="text-gray-600">"Find my black cocktail dress"</span>
               <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">2 items found</span>
             </div>
           </div>
