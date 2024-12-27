@@ -11,16 +11,16 @@ export const Navbar = () => {
             alt="Pocket Closet Logo"
             className="h-8 w-8"
           />
-          <div className="text-2xl font-bold text-neutral">Pocket Closet</div>
+          <div className="text-2xl font-bold text-black">Pocket Closet</div>
         </div>
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#how-it-works" className="text-neutral hover:text-primary transition-colors">
+          <a href="#how-it-works" className="text-black hover:text-primary transition-colors">
             How It Works
           </a>
-          <a href="#community" className="text-neutral hover:text-primary transition-colors">
+          <a href="#community" className="text-black hover:text-primary transition-colors">
             Community
           </a>
-          <a href="#ai-styling" className="text-neutral hover:text-primary transition-colors">
+          <a href="#ai-styling" className="text-black hover:text-primary transition-colors">
             AI Styling
           </a>
           <Button className="bg-primary hover:bg-primary-dark text-white flex items-center gap-2">
