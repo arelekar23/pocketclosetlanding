@@ -33,7 +33,7 @@ export const SocialCloset = () => {
                     />
                   </div>
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900">Your Style Circle</h3>
+                <h3 className="text-2xl font-semibold text-gray-900">Fashion Inner Circle</h3>
                 <p className="text-gray-600 text-center">
                   Create your inner circle of fashion-forward friends and family. Share, rent, or buy pieces from each other's closets.
                 </p>
