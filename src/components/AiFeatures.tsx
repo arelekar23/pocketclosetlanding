@@ -13,8 +13,8 @@ export const AiFeatures = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-8">
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
               <div className="relative h-96">
                 <img
@@ -75,7 +75,7 @@ export const AiFeatures = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-3 bg-white p-8 rounded-3xl shadow-lg space-y-6">
+          <div className="bg-white p-8 rounded-3xl shadow-lg space-y-6">
             <div className="flex items-center justify-between">
               <h3 className="text-2xl font-bold text-neutral">AI Insights</h3>
               <Sparkles className="w-6 h-6 text-primary" />
