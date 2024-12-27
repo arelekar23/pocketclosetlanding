@@ -97,7 +97,7 @@ export const SocialCloset = () => {
                 <p className="text-gray-600">Items Shared Monthly</p>
               </div>
               <div>
-                <h3 className="text-4xl font-bold text-secondary-dark mb-2">95%</h3>
+                <h3 className="text-4xl font-bold text-pink-500 mb-2">95%</h3>
                 <p className="text-gray-600">Happy Fashion Enthusiasts</p>
               </div>
             </div>
