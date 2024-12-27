@@ -6,7 +6,7 @@ export const SocialCloset = () => {
     <div className="pb-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">Share Your Style Circle</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">Share Your Closet</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Connect with family and friends to share, rent, or buy clothes while getting personalized AI recommendations.
           </p>
