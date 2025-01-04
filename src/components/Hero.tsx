@@ -1,7 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/use-toast";
 
 export const Hero = () => {
+  const [email, setEmail] = useState("");
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      toast({
+        title: "Thank you for joining!",
+        description: "We'll notify you when we launch.",
+      });
+      setEmail("");
+    }
+  };
+
   return (
     <div className="pt-32 pb-20 px-4 bg-white">
       <div className="container mx-auto">
@@ -20,9 +37,25 @@ export const Hero = () => {
               <Button className="bg-[#E5DEFF] hover:bg-[#E5DEFF]/90 text-[#553C9A] text-lg px-8 py-6 flex items-center gap-2">
                 Join Now <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button variant="outline" className="text-lg px-8 py-6 border-2 border-[#D946EF] text-[#D946EF] hover:bg-[#D946EF]/10">
-                See How It Works
-              </Button>
+              <form onSubmit={handleSubmit} className="flex-1 sm:max-w-md">
+                <div className="flex gap-2">
+                  <Input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="flex-1 border-2 border-[#D946EF] text-[#D946EF] h-[60px] text-lg"
+                    required
+                  />
+                  <Button 
+                    type="submit"
+                    variant="outline"
+                    className="text-lg px-8 h-[60px] border-2 border-[#D946EF] text-[#D946EF] hover:bg-[#D946EF]/10"
+                  >
+                    Join Waitlist
+                  </Button>
+                </div>
+              </form>
             </div>
           </div>
           <div className="flex-1 animate-fade-in">
