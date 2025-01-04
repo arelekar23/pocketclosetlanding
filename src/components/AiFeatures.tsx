@@ -31,7 +31,7 @@ export const AiFeatures = () => {
                     <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-[#D946EF]">Luxury</span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">Smart Organization</h3>
-                  <p className="text-gray-700">
+                  <p className="text-white">
                     Our AI automatically categorizes your items by style, color, and occasion
                   </p>
                 </div>
