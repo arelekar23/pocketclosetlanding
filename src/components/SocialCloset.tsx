@@ -33,7 +33,7 @@ export const SocialCloset = () => {
                     />
                   </div>
                 </div>
-                <Button className="bg-black hover:bg-gray-800 text-white w-full md:w-auto">
+                <Button className="bg-primary-light hover:bg-primary text-accent w-full md:w-auto">
                   Start Sharing <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
