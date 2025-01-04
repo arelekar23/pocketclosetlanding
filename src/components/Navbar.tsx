@@ -11,7 +11,7 @@ export const Navbar = () => {
             alt="Pocket Closet Logo"
             className="h-8 w-8"
           />
-          <div className="text-2xl font-bold text-black">Pocket Closet</div>
+          <div className="text-2xl font-bold text-black">PocketCloset</div>
         </div>
         <div className="hidden md:flex items-center space-x-8">
           <a href="#how-it-works" className="text-black hover:text-primary transition-colors">
