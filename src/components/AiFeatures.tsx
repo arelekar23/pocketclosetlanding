@@ -6,7 +6,7 @@ export const AiFeatures = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-            AI-Powered Wardrobe Magic
+            AI-Powered Wardrobe
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Transform your closet into a smart, organized fashion hub with our advanced AI technology.
