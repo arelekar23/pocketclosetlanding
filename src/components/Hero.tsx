@@ -10,7 +10,7 @@ export const Hero = () => {
             <div className="inline-block mb-4 px-4 py-2 bg-gray-50 rounded-full border border-[#D946EF]">
               <span className="text-gray-800 font-semibold">Coming Soon to App Store</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-[#000000] via-[#9b87f5] to-[#D946EF] bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-black">
               AI-Powered Fashion Within Your Circle
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">
