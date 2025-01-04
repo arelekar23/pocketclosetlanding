@@ -8,7 +8,7 @@ export const SocialCloset = () => {
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4 text-gray-900">Share Closets</h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-            Connect with family and friends to share, rent, or buy clothes while getting personalized AI recommendations.
+            Create your inner circle of fashion-forward friends and family. Share, rent, or buy pieces from each other's closets.
           </p>
         </div>
 
@@ -33,10 +33,6 @@ export const SocialCloset = () => {
                     />
                   </div>
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">Fashion Inner Circle</h3>
-                <p className="text-gray-600 text-center text-sm md:text-base">
-                  Create your inner circle of fashion-forward friends and family. Share, rent, or buy pieces from each other's closets.
-                </p>
                 <Button className="bg-black hover:bg-gray-800 text-white w-full md:w-auto">
                   Start Sharing <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
