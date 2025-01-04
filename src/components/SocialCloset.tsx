@@ -20,15 +20,15 @@ export const SocialCloset = () => {
                 <div className="flex items-center space-x-4">
                   <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden">
                     <img 
-                      src="/lovable-uploads/0cf1a32b-ecba-4534-a281-5a353cd4752f.png" 
-                      alt="Luxury pink closet" 
+                      src="/lovable-uploads/e6b5a923-4afd-463e-a9ea-681d5e4be273.png" 
+                      alt="Elegant dresses on hangers" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden">
                     <img 
-                      src="/lovable-uploads/3eebf933-a4c8-4b20-a87e-90b2583b9e37.png" 
-                      alt="Modern organized closet" 
+                      src="/lovable-uploads/ebe0c510-5c30-4537-9d85-b8bb717e996f.png" 
+                      alt="Sparkly dresses collection" 
                       className="w-full h-full object-cover"
                     />
                   </div>
