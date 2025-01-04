@@ -14,7 +14,7 @@ export const Hero = () => {
               AI-Powered Fashion Within Your Circle
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">
-              Maximize your wardrobe's potential with AI styling, rent or sell unused pieces, and style others. Transform your closet into a smart, sustainable fashion ecosystem.
+              Maximize your wardrobe's potential with AI styling, rent or sell unused pieces, and style others.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-[#D946EF] hover:bg-[#D946EF]/90 text-white text-lg px-8 py-6 flex items-center gap-2">
