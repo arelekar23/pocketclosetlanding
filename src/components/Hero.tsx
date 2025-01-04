@@ -17,7 +17,7 @@ export const Hero = () => {
               Maximize your wardrobe's potential with AI styling, rent or sell unused pieces, and style others.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-[#D946EF] hover:bg-[#D946EF]/90 text-white text-lg px-8 py-6 flex items-center gap-2">
+              <Button className="bg-[#E5DEFF] hover:bg-[#E5DEFF]/90 text-[#553C9A] text-lg px-8 py-6 flex items-center gap-2">
                 Join Now <ArrowRight className="w-5 h-5" />
               </Button>
               <Button variant="outline" className="text-lg px-8 py-6 border-2 border-[#D946EF] text-[#D946EF] hover:bg-[#D946EF]/10">
