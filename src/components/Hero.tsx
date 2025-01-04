@@ -33,30 +33,24 @@ export const Hero = () => {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">
               Maximize your wardrobe's potential with AI styling, rent or sell unused pieces, and style others.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-[#E5DEFF] hover:bg-[#E5DEFF]/90 text-[#553C9A] text-lg px-8 py-6 flex items-center gap-2">
-                Join Now <ArrowRight className="w-5 h-5" />
-              </Button>
-              <form onSubmit={handleSubmit} className="flex-1 sm:max-w-md">
-                <div className="flex gap-2">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 border-2 border-[#D946EF] text-black h-[60px] text-lg placeholder:text-gray-400"
-                    required
-                  />
-                  <Button 
-                    type="submit"
-                    variant="outline"
-                    className="text-lg px-8 h-[60px] border-2 border-[#D946EF] text-[#D946EF] hover:bg-[#D946EF]/10"
-                  >
-                    Join Waitlist
-                  </Button>
-                </div>
-              </form>
-            </div>
+            <form onSubmit={handleSubmit} className="max-w-2xl">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 border-2 border-[#D946EF] text-black h-[60px] text-lg placeholder:text-gray-400"
+                  required
+                />
+                <Button 
+                  type="submit"
+                  className="bg-[#E5DEFF] hover:bg-[#E5DEFF]/90 text-[#553C9A] text-lg px-8 h-[60px] flex items-center gap-2"
+                >
+                  Join Waitlist <ArrowRight className="w-5 h-5" />
+                </Button>
+              </div>
+            </form>
           </div>
           <div className="flex-1 animate-fade-in">
             <img
