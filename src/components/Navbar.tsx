@@ -20,9 +20,6 @@ export const Navbar = () => {
           <a href="#community" className="text-black hover:text-primary transition-colors">
             Community
           </a>
-          <a href="#ai-styling" className="text-black hover:text-primary transition-colors">
-            AI Styling
-          </a>
           <Button className="bg-primary hover:bg-primary-dark text-white flex items-center gap-2">
             Get Started <ArrowRight className="w-4 h-4" />
           </Button>
