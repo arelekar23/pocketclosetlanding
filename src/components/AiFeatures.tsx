@@ -76,34 +76,33 @@ export const AiFeatures = () => {
             </div>
           </div>
 
-          {/* Right Column - AI Insights */}
-          <div className="bg-white p-8 rounded-3xl shadow-lg space-y-6 h-fit lg:sticky lg:top-8">
-            <div className="flex items-center justify-between">
-              <h3 className="text-2xl font-bold text-neutral">AI Insights</h3>
-              <Sparkles className="w-6 h-6 text-primary" />
+        {/* Right Column - AI Insights */}
+        <div className="bg-white p-8 rounded-3xl shadow-lg space-y-6 h-fit lg:sticky lg:top-8">
+          <div className="flex items-center justify-between">
+            <h3 className="text-2xl font-bold text-neutral">AI Insights</h3>
+            <Sparkles className="w-6 h-6 text-primary" />
+          </div>
+          <div className="space-y-4">
+            <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
+              <h4 className="font-semibold mb-2">Style Analysis</h4>
+              <p className="text-gray-600">Your collection features a strong evening wear focus with luxury pieces</p>
             </div>
-            <div className="space-y-4">
-              <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                <h4 className="font-semibold mb-2">Style Analysis</h4>
-                <p className="text-gray-600">Your collection features a strong evening wear focus with luxury pieces</p>
+            <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
+              <h4 className="font-semibold mb-2">Color Palette</h4>
+              <div className="flex gap-2 mt-2">
+                <div className="w-8 h-8 rounded-full bg-[#D946EF]" title="Pink"></div>
+                <div className="w-8 h-8 rounded-full bg-[#222222]" title="Black"></div>
+                <div className="w-8 h-8 rounded-full bg-[#8A898C]" title="Gray"></div>
+                <div className="w-8 h-8 rounded-full bg-[#FFDEE2]" title="Soft Pink"></div>
               </div>
-              <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                <h4 className="font-semibold mb-2">Color Palette</h4>
-                <div className="flex gap-2 mt-2">
-                  <div className="w-8 h-8 rounded-full bg-green-500" title="Green"></div>
-                  <div className="w-8 h-8 rounded-full bg-yellow-300" title="Yellow"></div>
-                  <div className="w-8 h-8 rounded-full bg-white border" title="White"></div>
-                  <div className="w-8 h-8 rounded-full bg-purple-600" title="Purple"></div>
-                </div>
-              </div>
-              <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                <h4 className="font-semibold mb-2">Suggestions</h4>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Add more casual pieces</li>
-                  <li>• Consider neutral accessories</li>
-                  <li>• Balance with daywear options</li>
-                </ul>
-              </div>
+            </div>
+            <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
+              <h4 className="font-semibold mb-2">Suggestions</h4>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Add more casual pieces</li>
+                <li>• Consider neutral accessories</li>
+                <li>• Balance with daywear options</li>
+              </ul>
             </div>
           </div>
         </div>
