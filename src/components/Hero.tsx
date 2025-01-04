@@ -3,19 +3,39 @@ import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Hero = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase
+        .from('emails')
+        .insert([{ email }]);
+
+      if (error) throw error;
+
       toast({
         title: "Thank you for joining!",
         description: "We'll notify you when we launch.",
       });
       setEmail("");
+    } catch (error) {
+      console.error('Error saving email:', error);
+      toast({
+        title: "Error",
+        description: "Failed to join waitlist. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -42,12 +62,14 @@ export const Hero = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 border-2 border-[#D946EF] text-black h-[60px] text-lg placeholder:text-gray-400"
                   required
+                  disabled={isSubmitting}
                 />
                 <Button 
                   type="submit"
                   className="bg-[#E5DEFF] hover:bg-[#E5DEFF]/90 text-[#553C9A] text-lg px-8 h-[60px] flex items-center gap-2"
+                  disabled={isSubmitting}
                 >
-                  Join Waitlist <ArrowRight className="w-5 h-5" />
+                  {isSubmitting ? "Joining..." : "Join Waitlist"} <ArrowRight className="w-5 h-5" />
                 </Button>
               </div>
             </form>
