@@ -17,29 +17,27 @@ export const AiFeatures = () => {
           {/* Left Column */}
           <div className="flex flex-col gap-8">
             {/* Main Image Card */}
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
               <div className="relative h-[500px] lg:h-[600px]">
                 <img
                   src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
                   alt="Sparkly silver dress"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 bg-transparent backdrop-blur-sm rounded-full text-sm font-medium text-white border border-[#D946EF]">Sparkly</span>
-                    <span className="px-3 py-1 bg-transparent backdrop-blur-sm rounded-full text-sm font-medium text-white border border-[#D946EF]">Evening Wear</span>
-                    <span className="px-3 py-1 bg-transparent backdrop-blur-sm rounded-full text-sm font-medium text-white border border-[#D946EF]">Luxury</span>
+                    <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-[#D946EF]">Sparkly</span>
+                    <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-[#D946EF]">Evening Wear</span>
+                    <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-[#D946EF]">Luxury</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Smart Organization</h3>
-                  <p className="text-white/90">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Smart Organization</h3>
+                  <p className="text-gray-700">
                     Our AI automatically categorizes your items by style, color, and occasion
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Feature Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center justify-between mb-6">

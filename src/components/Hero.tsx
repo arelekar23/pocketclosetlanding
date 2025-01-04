@@ -25,25 +25,12 @@ export const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="flex-1 animate-fade-in relative group">
-            <div className="absolute inset-0 border-2 border-gray-200 rounded-2xl -rotate-3 transform transition-transform group-hover:rotate-0 duration-300"></div>
-            <div className="absolute inset-0 border-2 border-gray-200 rounded-2xl rotate-3 transform transition-transform group-hover:rotate-0 duration-300"></div>
-            
+          <div className="flex-1 animate-fade-in">
             <img
               src="/lovable-uploads/1ef52f1a-36ec-4fed-a4b7-99eab53a42c8.png"
               alt="Luxurious organized closet with LED lighting"
-              className="rounded-2xl shadow-2xl w-full max-w-[600px] mx-auto relative z-10 transform transition-transform duration-300 group-hover:scale-[1.02]"
+              className="rounded-2xl shadow-2xl w-full max-w-[600px] mx-auto"
             />
-            
-            <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-gray-200 rounded-tl-2xl"></div>
-            <div className="absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 border-gray-200 rounded-tr-2xl"></div>
-            <div className="absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 border-gray-200 rounded-bl-2xl"></div>
-            <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-gray-200 rounded-br-2xl"></div>
-            
-            <div className="absolute top-1/2 -translate-y-1/2 -left-4 w-8 h-32 bg-gray-50 rounded-r-lg"></div>
-            <div className="absolute top-1/2 -translate-y-1/2 -right-4 w-8 h-32 bg-gray-50 rounded-l-lg"></div>
-            
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-50/10 to-transparent animate-scan"></div>
           </div>
         </div>
       </div>
