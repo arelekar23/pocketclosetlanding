@@ -12,7 +12,7 @@ export const SocialCloset = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-20">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-20">
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl transform rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
             <div className="relative bg-white p-4 md:p-8 rounded-2xl shadow-xl">
@@ -40,44 +40,44 @@ export const SocialCloset = () => {
             </div>
           </div>
 
-          <div className="space-y-4 md:space-y-6">
-            <div className="bg-gradient-to-r from-secondary/20 to-primary/20 p-4 md:p-6 rounded-xl">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white flex items-center justify-center shrink-0">
-                  <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-base md:text-lg font-semibold mb-2">Share & Discover</h4>
-                  <p className="text-sm md:text-base text-gray-600">Browse through your friends' closets and share yours. Perfect for special occasions or trying new styles.</p>
-                </div>
+        <div className="space-y-4 md:space-y-6">
+          <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-4 md:p-6 rounded-xl">
+            <div className="flex items-start space-x-4">
+              <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white flex items-center justify-center shrink-0">
+                <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="text-base md:text-lg font-semibold mb-2">Share & Discover</h4>
+                <p className="text-sm md:text-base text-gray-600">Browse through your friends' closets and share yours. Perfect for special occasions or trying new styles.</p>
               </div>
             </div>
+          </div>
 
-            <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-4 md:p-6 rounded-xl">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white flex items-center justify-center shrink-0">
-                  <ShoppingCart className="w-5 h-5 md:w-6 md:h-6 text-accent" />
-                </div>
-                <div>
-                  <h4 className="text-base md:text-lg font-semibold mb-2">Smart Recommendations</h4>
-                  <p className="text-sm md:text-base text-gray-600">Get AI-powered suggestions for pieces that would complete your wardrobe based on your style and preferences.</p>
-                </div>
+          <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-4 md:p-6 rounded-xl">
+            <div className="flex items-start space-x-4">
+              <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white flex items-center justify-center shrink-0">
+                <ShoppingCart className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+              </div>
+              <div>
+                <h4 className="text-base md:text-lg font-semibold mb-2">Smart Recommendations</h4>
+                <p className="text-sm md:text-base text-gray-600">Get AI-powered suggestions for pieces that would complete your wardrobe based on your style and preferences.</p>
               </div>
             </div>
+          </div>
 
-            <div className="bg-gradient-to-r from-accent/20 to-secondary/20 p-4 md:p-6 rounded-xl">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white flex items-center justify-center shrink-0">
-                  <Share2 className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-base md:text-lg font-semibold mb-2">Rent, Buy & Sell</h4>
-                  <p className="text-sm md:text-base text-gray-600">Easily rent or purchase items from your circle. Sustainable fashion that's good for your wallet and the planet.</p>
-                </div>
+          <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-4 md:p-6 rounded-xl">
+            <div className="flex items-start space-x-4">
+              <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white flex items-center justify-center shrink-0">
+                <Share2 className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="text-base md:text-lg font-semibold mb-2">Rent, Buy & Sell</h4>
+                <p className="text-sm md:text-base text-gray-600">Easily rent or purchase items from your circle. Sustainable fashion that's good for your wallet and the planet.</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-2xl"></div>
@@ -98,7 +98,6 @@ export const SocialCloset = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
