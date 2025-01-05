@@ -30,9 +30,9 @@ export default {
           dark: "#8E1BA0",
         },
         secondary: {
-          DEFAULT: "#FFDEE2",
-          light: "#FFF0F2",
-          dark: "#FFB8C1",
+          DEFAULT: "#FFB8C1",
+          light: "#FFDEE2",
+          dark: "#FF8FA1",
         },
         accent: {
           DEFAULT: "#B422C9",
