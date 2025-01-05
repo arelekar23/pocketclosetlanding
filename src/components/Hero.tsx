@@ -76,8 +76,8 @@ export const Hero = () => {
           </div>
           <div className="flex-1 animate-fade-in">
             <img
-              src="/lovable-uploads/32f9cd0a-c0af-4062-9db8-01fb7deae88d.png"
-              alt="Luxurious pink walk-in closet with organized clothing racks and shoe shelves"
+              src="/lovable-uploads/51ad8b47-74a2-425a-b2ea-64c2a3ca91d2.png"
+              alt="Luxurious pink closet with LED-lit shoe shelves and elegant seating"
               className="rounded-2xl shadow-2xl w-full max-w-[600px] mx-auto"
             />
           </div>
