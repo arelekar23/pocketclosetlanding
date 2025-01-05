@@ -26,9 +26,9 @@ export const AiFeatures = () => {
                 />
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-[#D946EF]">Sparkly</span>
-                    <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-[#D946EF]">Evening Wear</span>
-                    <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-[#D946EF]">Luxury</span>
+                    <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-primary">Sparkly</span>
+                    <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-primary">Evening Wear</span>
+                    <span className="px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-gray-800 border border-primary">Luxury</span>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Smart Organization</h3>
                   <p className="text-white">

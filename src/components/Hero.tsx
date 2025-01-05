@@ -44,7 +44,7 @@ export const Hero = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 animate-fade-up">
-            <div className="inline-block mb-4 px-4 py-2 bg-gray-50 rounded-full border border-[#D946EF]">
+            <div className="inline-block mb-4 px-4 py-2 bg-gray-50 rounded-full border border-primary">
               <span className="text-gray-800 font-semibold">Coming Soon to App Store</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-black">
@@ -60,13 +60,13 @@ export const Hero = () => {
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 border-2 border-[#D946EF] text-black h-[60px] text-lg placeholder:text-gray-400"
+                  className="flex-1 border-2 border-primary text-black h-[60px] text-lg placeholder:text-gray-400"
                   required
                   disabled={isSubmitting}
                 />
                 <Button 
                   type="submit"
-                  className="bg-[#E5DEFF] hover:bg-[#E5DEFF]/90 text-[#553C9A] text-lg px-8 h-[60px] flex items-center gap-2"
+                  className="bg-secondary hover:bg-secondary-dark text-primary-dark text-lg px-8 h-[60px] flex items-center gap-2"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Joining..." : "Join Waitlist"} <ArrowRight className="w-5 h-5" />
