@@ -44,7 +44,7 @@ export const Hero = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 animate-fade-up">
-            <div className="inline-block mb-4 px-4 py-2 bg-gray-50 rounded-full border border-primary">
+            <div className="inline-block mb-4 px-4 py-2 bg-secondary/20 rounded-full border border-primary">
               <span className="text-gray-800 font-semibold">Coming Soon to App Store</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-black">
