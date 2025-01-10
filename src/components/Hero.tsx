@@ -40,7 +40,7 @@ export const Hero = () => {
   };
 
   return (
-    <div className="pt-32 pb-20 px-4 bg-white">
+    <div className="pt-32 pb-20 bg-white">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 animate-fade-up">
