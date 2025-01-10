@@ -41,7 +41,7 @@ export const SocialCloset = () => {
           </div>
 
           <div className="space-y-4 md:space-y-6">
-            <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-4 md:p-6 rounded-xl">
+            <div className="bg-gradient-to-r from-secondary/30 to-secondary/20 p-4 md:p-6 rounded-xl">
               <div className="flex items-start space-x-4">
                 <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white flex items-center justify-center shrink-0">
                   <Users className="w-5 h-5 md:w-6 md:h-6 text-primary" />
@@ -53,7 +53,7 @@ export const SocialCloset = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-4 md:p-6 rounded-xl">
+            <div className="bg-gradient-to-r from-secondary/30 to-secondary/20 p-4 md:p-6 rounded-xl">
               <div className="flex items-start space-x-4">
                 <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white flex items-center justify-center shrink-0">
                   <ShoppingCart className="w-5 h-5 md:w-6 md:h-6 text-accent" />
@@ -65,7 +65,7 @@ export const SocialCloset = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-4 md:p-6 rounded-xl">
+            <div className="bg-gradient-to-r from-secondary/30 to-secondary/20 p-4 md:p-6 rounded-xl">
               <div className="flex items-start space-x-4">
                 <div className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-white flex items-center justify-center shrink-0">
                   <Share2 className="w-5 h-5 md:w-6 md:h-6 text-primary" />
