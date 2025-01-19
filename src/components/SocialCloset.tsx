@@ -19,7 +19,7 @@ export const SocialCloset = () => {
                 <div className="flex items-center space-x-4">
                   <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden">
                     <img 
-                      src="/lovable-uploads/e6b5a923-4afd-463e-a9ea-681d5e4be273.png" 
+                      src="/lovable-uploads/1f69e346-c9a2-4dc1-ae1e-8946735cb480.png" 
                       alt="Elegant dresses on hangers" 
                       className="w-full h-full object-cover"
                     />
