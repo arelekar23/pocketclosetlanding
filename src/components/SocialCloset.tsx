@@ -14,7 +14,6 @@ export const SocialCloset = () => {
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-20">
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl transform rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
             <div className="relative bg-white p-4 md:p-8 rounded-2xl shadow-xl">
               <div className="flex flex-col items-center space-y-4 md:space-y-6">
                 <div className="flex items-center space-x-4">
