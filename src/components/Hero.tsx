@@ -56,14 +56,6 @@ export const Hero = () => {
       <div className="relative z-20 pt-32 pb-20">
         <div className="container mx-auto">
           <div className="max-w-xl">
-            <div className="flex items-center gap-4 mb-8">
-              <img 
-                src="/lovable-uploads/01d141b1-2049-4e53-91b4-f188435a627a.png" 
-                alt="Download on App Store" 
-                className="h-12 cursor-pointer hover:opacity-90 transition-opacity"
-                onClick={() => window.open('https://apps.apple.com/us/app/pocket-closet/id123456789', '_blank')}
-              />
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white">
               See what's in your closet
             </h1>
