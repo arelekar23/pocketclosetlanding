@@ -48,7 +48,7 @@ export const Hero = () => {
               <span className="text-gray-800 font-semibold">Coming Soon to App Store</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-black">
-              AI-Powered Fashion Within Your Circle
+              See what's in your closet
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">
               Maximize your wardrobe's potential with AI styling, rent or sell unused pieces, and style others.
