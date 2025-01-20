@@ -40,10 +40,10 @@ export const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-black">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 opacity-50"
         style={{
           backgroundImage: "url('/lovable-uploads/6e3bd16c-e1f7-4faf-ae2d-7b512efb914e.png')",
           backgroundSize: "cover",
@@ -51,37 +51,38 @@ export const Hero = () => {
           backgroundRepeat: "no-repeat",
         }}
       />
-      
-      {/* Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* Content */}
       <div className="relative z-20 pt-32 pb-20">
         <div className="container mx-auto">
-          <div className="max-w-2xl">
-            <div className="inline-block mb-4 px-4 py-2 bg-white rounded-full border border-primary">
-              <span className="text-gray-800 font-semibold">Coming Soon to App Store</span>
+          <div className="max-w-xl">
+            <div className="flex items-center gap-4 mb-8">
+              <img 
+                src="/lovable-uploads/1477e8ac-7cf0-4c26-825f-14d6ff9941bc.png" 
+                alt="Download on App Store" 
+                className="h-12 cursor-pointer hover:opacity-90 transition-opacity"
+              />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white">
               See what's in your closet
             </h1>
-            <form onSubmit={handleSubmit} className="max-w-2xl">
+            <form onSubmit={handleSubmit} className="max-w-md">
               <div className="flex flex-col sm:flex-row gap-4">
                 <Input
                   type="email"
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 border-2 border-primary text-black h-[60px] text-lg placeholder:text-gray-400"
+                  className="flex-1 border-2 border-primary text-black h-[50px] text-base placeholder:text-gray-400"
                   required
                   disabled={isSubmitting}
                 />
                 <Button 
                   type="submit"
-                  className="bg-black hover:bg-neutral-800 text-white text-lg px-8 h-[60px] flex items-center gap-2"
+                  className="bg-black hover:bg-neutral-800 text-white text-base px-6 h-[50px] flex items-center gap-2 border border-white"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Joining..." : "Join Waitlist"} <ArrowRight className="w-5 h-5" />
+                  {isSubmitting ? "Joining..." : "Join Waitlist"} <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
             </form>
