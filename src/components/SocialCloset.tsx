@@ -77,26 +77,6 @@ export const SocialCloset = () => {
             </div>
           </div>
         </div>
-
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-2xl"></div>
-          <div className="relative bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-2xl border border-gray-100">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center">
-              <div>
-                <h3 className="text-3xl md:text-4xl font-bold text-black mb-2">500+</h3>
-                <p className="text-sm md:text-base text-gray-600">Active Style Circles</p>
-              </div>
-              <div>
-                <h3 className="text-3xl md:text-4xl font-bold text-black mb-2">10k+</h3>
-                <p className="text-sm md:text-base text-gray-600">Items Shared Monthly</p>
-              </div>
-              <div>
-                <h3 className="text-3xl md:text-4xl font-bold text-black mb-2">95%</h3>
-                <p className="text-sm md:text-base text-gray-600">Happy Fashion Enthusiasts</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
