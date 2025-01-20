@@ -111,13 +111,17 @@ export const Hero = () => {
             style={{
               left: item.position[window.innerWidth >= 768 ? 'desktop' : 'mobile'].left,
               top: item.position[window.innerWidth >= 768 ? 'desktop' : 'mobile'].top,
+              animation: `float ${6 + index}s ease-in-out infinite`,
+              animationDelay: `${index * 0.5}s`,
             }}
           >
             <div className={`relative w-12 h-12 md:w-16 md:h-16 ${item.color} rounded-full p-2 md:p-3 
-              transition-all duration-500 hover:scale-110 backdrop-blur-sm
+              transition-all duration-500 hover:scale-110 backdrop-blur-sm animate-bounce-slow
               ${index === activeItem ? 'ring-2 ring-primary shadow-lg' : ''}`}
+              style={{
+                animationDelay: `${index * 0.3}s`,
+              }}
             >
-              <div className="absolute inset-0 bg-white/10 rounded-full animate-ping opacity-75" />
               {item.icon}
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap
                 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
