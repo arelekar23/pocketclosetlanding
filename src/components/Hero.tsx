@@ -66,7 +66,7 @@ export const Hero = () => {
                 />
                 <Button 
                   type="submit"
-                  className="bg-gray-400 hover:bg-gray-500 text-white text-lg px-8 h-[60px] flex items-center gap-2"
+                  className="bg-black hover:bg-neutral-800 text-white text-lg px-8 h-[60px] flex items-center gap-2"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Joining..." : "Join Waitlist"} <ArrowRight className="w-5 h-5" />
