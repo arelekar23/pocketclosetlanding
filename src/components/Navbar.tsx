@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export const Navbar = () => {
   return (
-    <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 py-4">
+    <nav className="fixed w-full z-50 py-4">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img
