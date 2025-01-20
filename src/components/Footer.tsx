@@ -6,9 +6,9 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Pocket Closet</h3>
+            <h3 className="font-bold text-lg mb-4">PocketCloset</h3>
             <p className="text-gray-600">
-              Transform your wardrobe with AI-powered styling and sustainable fashion solutions.
+   
             </p>
           </div>
           <div>
