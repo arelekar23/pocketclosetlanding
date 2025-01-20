@@ -7,7 +7,7 @@ export const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img
-            src="/lovable-uploads/b5f1f65e-8bdf-49cc-8d1d-ae3869a01a3b.png"
+            src="/lovable-uploads/a9a7e67e-fecf-4dc8-8920-f37ef20999c0.png"
             alt="Pocket Closet Logo"
             className="h-8 w-8"
           />
