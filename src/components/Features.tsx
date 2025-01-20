@@ -4,17 +4,14 @@ const features = [
   {
     icon: Sparkles,
     title: "AI Style Assistant",
-    description: "Get personalized outfit recommendations based on your style, occasions, and existing wardrobe.",
   },
   {
     icon: Users,
     title: "Trusted Circles",
-    description: "Share and discover fashion within your community of friends, colleagues, and style enthusiasts.",
   },
   {
     icon: Recycle,
     title: "Sustainable Fashion",
-    description: "Reduce fashion waste by renting, selling, and buying pre-loved items from people you trust.",
   },
 ];
 
@@ -30,8 +27,7 @@ export const Features = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <feature.icon className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold text-neutral mb-2">{feature.title}</h3>
-              <p className="text-neutral-light">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-neutral">{feature.title}</h3>
             </div>
           ))}
         </div>
