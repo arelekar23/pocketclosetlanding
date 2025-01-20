@@ -15,19 +15,28 @@ export const Hero = () => {
     { 
       icon: <Shirt className="w-full h-full" />, 
       color: "bg-primary/20", 
-      position: { left: "75%", top: "15%" },
+      position: { 
+        desktop: { left: "75%", top: "15%" },
+        mobile: { left: "70%", top: "10%" }
+      },
       label: "150+ items"
     },
     { 
       icon: <Camera className="w-full h-full" />, 
       color: "bg-secondary/20", 
-      position: { left: "85%", top: "45%" },
+      position: { 
+        desktop: { left: "85%", top: "45%" },
+        mobile: { left: "80%", top: "30%" }
+      },
       label: "Quick snap"
     },
     { 
       icon: <Heart className="w-full h-full" />, 
       color: "bg-accent/20", 
-      position: { left: "70%", top: "75%" },
+      position: { 
+        desktop: { left: "70%", top: "75%" },
+        mobile: { left: "65%", top: "50%" }
+      },
       label: "Style match"
     },
   ];
@@ -83,8 +92,8 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-20 z-10">
+      {/* Decorative Elements - Hidden on mobile */}
+      <div className="absolute top-20 right-20 z-10 hidden md:block">
         <div className="relative">
           <Sparkles className="w-6 h-6 text-primary animate-pulse absolute -top-3 -right-3" />
           <div className="w-24 h-24 rounded-full bg-primary/10 backdrop-blur-sm flex items-center justify-center">
@@ -100,11 +109,11 @@ export const Hero = () => {
             key={index}
             className="absolute group cursor-pointer pointer-events-auto"
             style={{
-              left: item.position.left,
-              top: item.position.top,
+              left: item.position[window.innerWidth >= 768 ? 'desktop' : 'mobile'].left,
+              top: item.position[window.innerWidth >= 768 ? 'desktop' : 'mobile'].top,
             }}
           >
-            <div className={`relative w-16 h-16 ${item.color} rounded-full p-3 
+            <div className={`relative w-12 h-12 md:w-16 md:h-16 ${item.color} rounded-full p-2 md:p-3 
               transition-all duration-500 hover:scale-110 backdrop-blur-sm
               ${index === activeItem ? 'ring-2 ring-primary shadow-lg' : ''}`}
             >
@@ -112,7 +121,7 @@ export const Hero = () => {
               {item.icon}
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap
                 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="px-3 py-1 bg-white/90 rounded-full text-xs font-medium text-gray-800
+                <span className="px-2 md:px-3 py-1 bg-white/90 rounded-full text-xs font-medium text-gray-800
                   shadow-lg backdrop-blur-sm">
                   {item.label}
                 </span>
@@ -126,7 +135,7 @@ export const Hero = () => {
       <div className="relative z-20 min-h-screen flex items-center">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl relative">
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white group">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 md:mb-8 leading-tight text-white group">
               See what's in your{" "}
               <span className="relative inline-block">
                 closet{" "}
@@ -138,38 +147,38 @@ export const Hero = () => {
               </span>
             </h1>
             
-            <div className="relative mb-8">
-              <div className="absolute -left-4 top-1/2 -translate-y-1/2">
+            <div className="relative mb-6 md:mb-8">
+              <div className="absolute -left-4 top-1/2 -translate-y-1/2 hidden md:block">
                 <div className="w-8 h-8 rounded-full bg-primary/20 animate-pulse" />
               </div>
-              <p className="text-gray-300 text-lg">
+              <p className="text-base md:text-lg text-gray-300">
                 Organize your wardrobe, discover your style, and share with friends.
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="max-w-md mb-6 relative group">
+            <form onSubmit={handleSubmit} className="w-full max-w-md mb-6 relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent 
                 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-              <div className="relative flex flex-col sm:flex-row gap-4">
+              <div className="relative flex flex-col sm:flex-row gap-3 md:gap-4">
                 <div className="relative flex-1">
                   <Input
                     type="email"
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 border-2 border-primary bg-white/10 text-white h-[50px] text-base 
+                    className="flex-1 border-2 border-primary bg-white/10 text-white h-[45px] md:h-[50px] text-sm md:text-base 
                       placeholder:text-gray-400 focus:bg-white/20 transition-all duration-300
                       pr-10 hover:bg-white/15"
                     required
                     disabled={isSubmitting}
                   />
-                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-gray-400" />
                 </div>
                 <Button 
                   type="submit"
-                  className="bg-white hover:bg-gray-100 text-black font-semibold text-base px-6 h-[50px] 
+                  className="bg-white hover:bg-gray-100 text-black font-semibold text-sm md:text-base px-4 md:px-6 h-[45px] md:h-[50px] 
                     flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
-                    hover:shadow-primary/20"
+                    hover:shadow-primary/20 w-full sm:w-auto justify-center"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Joining..." : "Join Waitlist"} 
@@ -190,7 +199,7 @@ export const Hero = () => {
               <img 
                 src="/app-store.svg" 
                 alt="Download on the App Store" 
-                className="h-[40px] md:h-[50px] w-auto relative hover:-translate-y-0.5 transition-all duration-300"
+                className="h-[35px] sm:h-[40px] md:h-[50px] w-auto relative hover:-translate-y-0.5 transition-all duration-300"
               />
             </a>
           </div>

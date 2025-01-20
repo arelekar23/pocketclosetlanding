@@ -7,13 +7,13 @@ export const SocialCloset = () => {
       <div className="container mx-auto px-4 pt-12 md:pt-20">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-gray-900">
-            Share your closet with your friends
+            Explore local closets
           </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center mb-12 md:mb-20">
           {/* Left Side - Interactive Map */}
-          <div className="relative order-2 md:order-1">
+          <div className="relative order-1 md:order-1">
             <div className="relative bg-white p-4 md:p-8 rounded-3xl shadow-xl">
               <div className="aspect-square relative bg-gray-50 rounded-2xl overflow-hidden">
                 {/* Map Background */}
@@ -101,29 +101,27 @@ export const SocialCloset = () => {
           </div>
 
           {/* Right Side - Features */}
-          <div className="space-y-4 md:space-y-6 order-1 md:order-2">
-            {/* Feature cards with enhanced interactivity */}
+          <div className="space-y-4 md:space-y-6 order-2 md:order-2">
+            {/* Local Fashion Community Card */}
             <div className="group relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-transparent 
-                rounded-2xl blur opacity-0 group-hover:opacity-75 transition duration-500" />
+                rounded-2xl blur opacity-75 transition duration-500" />
               <div className="relative bg-gradient-to-r from-primary/5 to-transparent p-4 md:p-6 rounded-2xl 
-                hover:from-primary/10 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
+                from-primary/10 transition-all duration-300 shadow-lg">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 
-                    flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-5 h-5 md:w-6 md:h-6 text-primary group-hover:animate-pulse" />
+                    flex items-center justify-center shrink-0 scale-110 transition-transform duration-300">
+                    <Users className="w-5 h-5 md:w-6 md:h-6 text-primary animate-pulse" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <h4 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Local Fashion Community</h4>
-                      <ChevronRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 
-                        transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
+                      <ChevronRight className="w-5 h-5 text-primary transform translate-x-1" />
                     </div>
-                    <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-700">
+                    <p className="text-sm md:text-base text-gray-700">
                       Connect with fashion enthusiasts in your area. Share styles, get inspiration, and build your network.
                     </p>
-                    <div className="mt-3 flex items-center gap-2 text-xs text-primary font-medium opacity-0 
-                      group-hover:opacity-100 transition-all duration-300">
+                    <div className="mt-3 flex items-center gap-2 text-xs text-primary font-medium">
                       <span>150+ users nearby</span>
                       <div className="flex -space-x-2">
                         {[...Array(3)].map((_, i) => (
@@ -139,27 +137,26 @@ export const SocialCloset = () => {
               </div>
             </div>
 
+            {/* Buy & Sell Card */}
             <div className="group relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-accent/30 to-transparent 
-                rounded-2xl blur opacity-0 group-hover:opacity-75 transition duration-500" />
+                rounded-2xl blur opacity-75 transition duration-500" />
               <div className="relative bg-gradient-to-r from-accent/5 to-transparent p-4 md:p-6 rounded-2xl 
-                hover:from-accent/10 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
+                from-accent/10 transition-all duration-300 shadow-lg">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent/10 
-                    flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <ShoppingCart className="w-5 h-5 md:w-6 md:h-6 text-accent group-hover:animate-pulse" />
+                    flex items-center justify-center shrink-0 scale-110 transition-transform duration-300">
+                    <ShoppingCart className="w-5 h-5 md:w-6 md:h-6 text-accent animate-pulse" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <h4 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Buy & Sell</h4>
-                      <ChevronRight className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 
-                        transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
+                      <ChevronRight className="w-5 h-5 text-accent transform translate-x-1" />
                     </div>
-                    <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-700">
+                    <p className="text-sm md:text-base text-gray-700">
                       Trade fashion items with verified users in your area. Safe, secure, and sustainable shopping.
                     </p>
-                    <div className="mt-3 flex items-center gap-2 text-xs text-accent font-medium opacity-0 
-                      group-hover:opacity-100 transition-all duration-300">
+                    <div className="mt-3 flex items-center gap-2 text-xs text-accent font-medium">
                       <span>25+ items for sale</span>
                       <div className="h-1.5 w-1.5 rounded-full bg-accent/50" />
                       <span>10+ recent trades</span>
@@ -169,28 +166,26 @@ export const SocialCloset = () => {
               </div>
             </div>
 
-            {/* Rent & Share Card - Updated colors */}
+            {/* Rent & Share Card */}
             <div className="group relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500/30 to-transparent 
-                rounded-2xl blur opacity-0 group-hover:opacity-75 transition duration-500" />
+                rounded-2xl blur opacity-75 transition duration-500" />
               <div className="relative bg-gradient-to-r from-indigo-500/5 to-transparent p-4 md:p-6 rounded-2xl 
-                hover:from-indigo-500/10 transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-lg">
+                from-indigo-500/10 transition-all duration-300 shadow-lg">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-indigo-500/10 
-                    flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Share2 className="w-5 h-5 md:w-6 md:h-6 text-indigo-500 group-hover:animate-pulse" />
+                    flex items-center justify-center shrink-0 scale-110 transition-transform duration-300">
+                    <Share2 className="w-5 h-5 md:w-6 md:h-6 text-indigo-500 animate-pulse" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <h4 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Rent & Share</h4>
-                      <ChevronRight className="w-5 h-5 text-indigo-500 opacity-0 group-hover:opacity-100 
-                        transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
+                      <ChevronRight className="w-5 h-5 text-indigo-500 transform translate-x-1" />
                     </div>
-                    <p className="text-sm md:text-base text-gray-600 group-hover:text-gray-700">
+                    <p className="text-sm md:text-base text-gray-700">
                       Rent designer pieces or share your collection. Perfect for special occasions and trying new styles.
                     </p>
-                    <div className="mt-3 flex items-center gap-2 text-xs text-indigo-500 font-medium opacity-0 
-                      group-hover:opacity-100 transition-all duration-300">
+                    <div className="mt-3 flex items-center gap-2 text-xs text-indigo-500 font-medium">
                       <span>15+ items available</span>
                       <div className="h-1.5 w-1.5 rounded-full bg-indigo-500/50" />
                       <span>Active rentals: 8</span>

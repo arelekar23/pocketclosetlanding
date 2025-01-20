@@ -1,42 +1,44 @@
-import { Upload, Search, Tags, Brain, Camera, Smartphone, Sparkles } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Upload, Search, Tags, Brain, Camera, Smartphone, Sparkles, Users } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+
+const AI_MESSAGES = [
+  "Your collection features a strong evening wear focus with luxury pieces",
+  "Let me analyze the color palette for you...",
+  "I suggest adding more casual pieces to balance your wardrobe"
+];
 
 export const AiFeatures = () => {
   const [activeMessage, setActiveMessage] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
 
-  const messages = [
-    "Your collection features a strong evening wear focus with luxury pieces",
-    "Let me analyze the color palette for you...",
-    "I suggest adding more casual pieces to balance your wardrobe"
-  ];
-
-  useEffect(() => {
+  const typeMessage = useCallback(() => {
+    setDisplayedText("");
+    setIsTyping(true);
     let currentText = "";
     let currentIndex = 0;
+    
+    const interval = setInterval(() => {
+      if (currentIndex < AI_MESSAGES[activeMessage].length) {
+        currentText += AI_MESSAGES[activeMessage][currentIndex];
+        setDisplayedText(currentText);
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+        setIsTyping(false);
+        setTimeout(() => {
+          setActiveMessage((prev) => (prev + 1) % AI_MESSAGES.length);
+        }, 2000);
+      }
+    }, 50);
 
-    if (isTyping) {
-      const typingInterval = setInterval(() => {
-        if (currentIndex < messages[activeMessage].length) {
-          currentText += messages[activeMessage][currentIndex];
-          setDisplayedText(currentText);
-          currentIndex++;
-        } else {
-          setIsTyping(false);
-          clearInterval(typingInterval);
-          // Move to next message after a delay
-          setTimeout(() => {
-            setIsTyping(true);
-            setActiveMessage((prev) => (prev + 1) % messages.length);
-            setDisplayedText("");
-          }, 3000);
-        }
-      }, 50); // Adjust typing speed here
+    return () => clearInterval(interval);
+  }, [activeMessage]);
 
-      return () => clearInterval(typingInterval);
-    }
-  }, [activeMessage, isTyping]);
+  useEffect(() => {
+    const cleanup = typeMessage();
+    return cleanup;
+  }, [activeMessage, typeMessage]);
 
   return (
     <section id="ai-features" className="py-12 bg-gradient-to-b from-white to-gray-50">
@@ -72,6 +74,20 @@ export const AiFeatures = () => {
 
                     {/* AI Chat Bubbles */}
                     <div className="space-y-3 max-w-xl">
+                      {/* User Question Bubble */}
+                      <div className="flex items-start justify-end gap-3">
+                        <div className="p-4 bg-primary/10 backdrop-blur-sm rounded-2xl rounded-tr-none
+                          transform transition-all duration-300 hover:scale-102 hover:shadow-lg">
+                          <p className="text-white text-sm">
+                            Can you analyze my wardrobe style?
+                          </p>
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                          <Users className="w-4 h-4 text-white" />
+                        </div>
+                      </div>
+
+                      {/* AI Response Bubble */}
                       <div className="flex items-start gap-3">
                         <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0
                           animate-bounce">
@@ -83,38 +99,6 @@ export const AiFeatures = () => {
                             {displayedText}
                             {isTyping && <span className="animate-pulse">|</span>}
                           </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                          <Sparkles className="w-4 h-4 text-white animate-spin-slow" />
-                        </div>
-                        <div className="p-4 bg-white/90 backdrop-blur-sm rounded-2xl rounded-tl-none
-                          transform transition-all duration-300 hover:scale-102 hover:shadow-lg">
-                          <h4 className="text-gray-800 font-semibold mb-2">Color Palette</h4>
-                          <div className="flex gap-2">
-                            {[
-                              { color: "#D946EF", name: "Pink" },
-                              { color: "#222222", name: "Black" },
-                              { color: "#8A898C", name: "Gray" },
-                              { color: "#FFDEE2", name: "Soft Pink" }
-                            ].map((color, index) => (
-                              <div
-                                key={color.name}
-                                className="group relative cursor-pointer transform transition-all duration-300 hover:scale-110"
-                              >
-                                <div 
-                                  className="w-6 h-6 rounded-full ring-2 ring-white"
-                                  style={{ backgroundColor: color.color }}
-                                />
-                                <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-white
-                                  opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                                  {color.name}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
                         </div>
                       </div>
                     </div>
