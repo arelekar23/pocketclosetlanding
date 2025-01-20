@@ -40,19 +40,31 @@ export const Hero = () => {
   };
 
   return (
-    <div className="pt-32 pb-20 bg-white">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1 animate-fade-up">
+    <div className="relative min-h-screen">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/lovable-uploads/6e3bd16c-e1f7-4faf-ae2d-7b512efb914e.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      
+      {/* Overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-black/30 z-10" />
+
+      {/* Content */}
+      <div className="relative z-20 pt-32 pb-20">
+        <div className="container mx-auto">
+          <div className="max-w-2xl">
             <div className="inline-block mb-4 px-4 py-2 bg-white rounded-full border border-primary">
               <span className="text-gray-800 font-semibold">Coming Soon to App Store</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-black">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
               See what's in your closet
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl">
-              Maximize your wardrobe's potential with AI styling, rent or sell unused pieces, and style others.
-            </p>
             <form onSubmit={handleSubmit} className="max-w-2xl">
               <div className="flex flex-col sm:flex-row gap-4">
                 <Input
@@ -73,13 +85,6 @@ export const Hero = () => {
                 </Button>
               </div>
             </form>
-          </div>
-          <div className="flex-1 animate-fade-in">
-            <img
-              src="/lovable-uploads/6e3bd16c-e1f7-4faf-ae2d-7b512efb914e.png"
-              alt="Pink crystal-embellished crop top with delicate beading"
-              className="rounded-2xl shadow-2xl w-full max-w-[600px] mx-auto"
-            />
           </div>
         </div>
       </div>
