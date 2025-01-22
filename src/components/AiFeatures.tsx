@@ -56,7 +56,7 @@ export const AiFeatures = () => {
         {/* AI Features Grid */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto mb-20">
           {/* Left Side - Chat Demo */}
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden pb-0">
             <div className="relative">
               <img
                 src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
