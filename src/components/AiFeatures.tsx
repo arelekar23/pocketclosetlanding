@@ -41,7 +41,7 @@ export const AiFeatures = () => {
   }, [activeMessage, typeMessage]);
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="pt-16 pb-12 md:pt-24 md:pb-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         {/* Title Section */}
         <div className="max-w-2xl mb-16">
@@ -54,7 +54,7 @@ export const AiFeatures = () => {
         </div>
 
         {/* AI Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto mb-20">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
           {/* Left Side - Chat Demo */}
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
             <div className="relative">
@@ -101,7 +101,7 @@ export const AiFeatures = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-0">
                       {["Weather-Ready", "Layered", "Cozy"].map((tag) => (
                         <span key={tag} className="px-3 py-1 bg-primary/10 rounded-full text-sm text-primary">
                           {tag}
