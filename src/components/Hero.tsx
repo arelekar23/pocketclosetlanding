@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Search, Shirt, ShoppingBag, Heart, Camera } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ArrowRight, Search } from "lucide-react";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -8,45 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 export const Hero = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [activeItem, setActiveItem] = useState(0);
   const { toast } = useToast();
-
-  const floatingItems = [
-    { 
-      icon: <Shirt className="w-full h-full" />, 
-      color: "bg-primary/20", 
-      position: { 
-        desktop: { left: "75%", top: "15%" },
-        mobile: { left: "70%", top: "10%" }
-      },
-      label: "150+ items"
-    },
-    { 
-      icon: <Camera className="w-full h-full" />, 
-      color: "bg-secondary/20", 
-      position: { 
-        desktop: { left: "85%", top: "45%" },
-        mobile: { left: "80%", top: "30%" }
-      },
-      label: "Quick snap"
-    },
-    { 
-      icon: <Heart className="w-full h-full" />, 
-      color: "bg-accent/20", 
-      position: { 
-        desktop: { left: "70%", top: "75%" },
-        mobile: { left: "65%", top: "50%" }
-      },
-      label: "Style match"
-    },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveItem((prev) => (prev + 1) % floatingItems.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,111 +40,53 @@ export const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
-      {/* Background Image with overlay */}
-      <div 
-        className="absolute inset-0 z-0 transition-transform duration-1000 hover:scale-105"
-        style={{
-          backgroundImage: "url('/lovable-uploads/6e3bd16c-e1f7-4faf-ae2d-7b512efb914e.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
-      </div>
-
-      {/* Decorative Elements - Hidden on mobile */}
-      <div className="absolute top-20 right-20 z-10 hidden md:block">
-        <div className="relative">
-          <Sparkles className="w-6 h-6 text-primary animate-pulse absolute -top-3 -right-3" />
-          <div className="w-24 h-24 rounded-full bg-primary/10 backdrop-blur-sm flex items-center justify-center">
-            <Shirt className="w-12 h-12 text-primary" />
-          </div>
-        </div>
-      </div>
-
-      {/* Floating Interactive Elements */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        {floatingItems.map((item, index) => (
-          <div
-            key={index}
-            className="absolute group cursor-pointer pointer-events-auto"
-            style={{
-              left: item.position[window.innerWidth >= 768 ? 'desktop' : 'mobile'].left,
-              top: item.position[window.innerWidth >= 768 ? 'desktop' : 'mobile'].top,
-              animation: `float ${6 + index}s ease-in-out infinite`,
-              animationDelay: `${index * 0.5}s`,
-            }}
-          >
-            <div className={`relative w-12 h-12 md:w-16 md:h-16 ${item.color} rounded-full p-2 md:p-3 
-              transition-all duration-500 hover:scale-110 backdrop-blur-sm animate-bounce-slow
-              ${index === activeItem ? 'ring-2 ring-primary shadow-lg' : ''}`}
-              style={{
-                animationDelay: `${index * 0.3}s`,
-              }}
-            >
-              {item.icon}
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap
-                opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="px-2 md:px-3 py-1 bg-white/90 rounded-full text-xs font-medium text-gray-800
-                  shadow-lg backdrop-blur-sm">
-                  {item.label}
+    <div className="min-h-screen bg-black pt-8 md:pt-20">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 relative z-10 pb-8 md:pb-12">
+          {/* Right Side - Content (appears first on mobile) */}
+          <div className="flex flex-col justify-center space-y-6 md:space-y-8 p-4 md:p-6
+            order-1 md:order-2 mt-12 sm:mt-16 md:mt-0">
+            <div className="space-y-4 md:space-y-6 mb-4 md:mb-0 pt-12 sm:pt-16 md:pt-0">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white group text-center md:text-left">
+                See what's in your{" "}
+                <span className="relative inline-block">
+                  closet{" "}
+                  <span className="inline-block group-hover:rotate-12 transition-transform duration-300">
+                    👀
+                  </span>
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent 
+                    transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                 </span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Content */}
-      <div className="relative z-20 min-h-screen flex items-center">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl relative">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 md:mb-8 leading-tight text-white group">
-              See what's in your{" "}
-              <span className="relative inline-block">
-                closet{" "}
-                <span className="inline-block group-hover:rotate-12 transition-transform duration-300">
-                  👀
-                </span>
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent 
-                  transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-              </span>
-            </h1>
-            
-            <div className="relative mb-6 md:mb-8">
-              <div className="absolute -left-4 top-1/2 -translate-y-1/2 hidden md:block">
-                <div className="w-8 h-8 rounded-full bg-primary/20 animate-pulse" />
-              </div>
-              <p className="text-base md:text-lg text-gray-300">
+              </h1>
+              
+              <p className="text-base md:text-lg text-gray-300 text-center md:text-left">
                 Organize your wardrobe, discover your style, and share with friends.
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="w-full max-w-md mb-6 relative group">
+            <form onSubmit={handleSubmit} className="relative group max-w-md mx-auto md:mx-0">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent 
                 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-              <div className="relative flex flex-col sm:flex-row gap-3 md:gap-4">
+              <div className="relative flex flex-col gap-3">
                 <div className="relative flex-1">
                   <Input
                     type="email"
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 border-2 border-primary bg-white/10 text-white h-[45px] md:h-[50px] text-sm md:text-base 
+                    className="flex-1 border-2 border-primary bg-white/10 text-white h-[45px] 
                       placeholder:text-gray-400 focus:bg-white/20 transition-all duration-300
-                      pr-10 hover:bg-white/15"
+                      pr-10 hover:bg-white/15 w-full"
                     required
                     disabled={isSubmitting}
                   />
-                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-gray-400" />
+                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 </div>
                 <Button 
                   type="submit"
-                  className="bg-white hover:bg-gray-100 text-black font-semibold text-sm md:text-base px-4 md:px-6 h-[45px] md:h-[50px] 
+                  className="bg-white hover:bg-gray-100 text-black font-semibold px-4 h-[45px]
                     flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
-                    hover:shadow-primary/20 w-full sm:w-auto justify-center"
+                    hover:shadow-primary/20 w-full justify-center"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Joining..." : "Join Waitlist"} 
@@ -191,10 +95,9 @@ export const Hero = () => {
               </div>
             </form>
 
-            {/* App Store Button with enhanced hover effect */}
             <a 
               href="#" 
-              className="inline-block group relative"
+              className="inline-block group relative w-fit mx-auto md:mx-0 mt-4 md:mt-0"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -203,9 +106,54 @@ export const Hero = () => {
               <img 
                 src="/app-store.svg" 
                 alt="Download on the App Store" 
-                className="h-[35px] sm:h-[40px] md:h-[50px] w-auto relative hover:-translate-y-0.5 transition-all duration-300"
+                className="h-[35px] md:h-[40px] w-auto relative hover:-translate-y-0.5 transition-all duration-300"
               />
             </a>
+          </div>
+
+          {/* Left Side - Chat Interface (appears second on mobile) */}
+          <div className="bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl
+            order-2 md:order-1 mt-6 md:mt-0">
+            {/* User Message */}
+            <div className="flex justify-end gap-2 md:gap-3 mb-4 md:mb-6">
+              <div className="bg-primary/10 rounded-2xl rounded-tr-none p-3 md:p-4 max-w-[85%] md:max-w-[80%]
+                shadow-lg">
+                <p className="text-white text-sm">I need a pink top for my date tonight, what do I have?</p>
+              </div>
+              <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-white/10 flex items-center justify-center
+                shadow-md">
+                <span className="text-white text-sm">👤</span>
+              </div>
+            </div>
+
+            {/* AI Response */}
+            <div className="flex gap-2 md:gap-3">
+              <div className="min-w-7 min-h-7 w-7 h-7 md:min-w-8 md:min-h-8 md:w-8 md:h-8 
+                rounded-full bg-gradient-to-br from-primary to-secondary 
+                flex items-center justify-center shadow-lg ring-2 ring-primary/20 flex-shrink-0">
+                <span className="text-white text-[10px] font-bold tracking-wider">AI</span>
+              </div>
+              <div className="bg-white/10 rounded-2xl rounded-tl-none p-3 md:p-4 shadow-lg">
+                <p className="text-white text-sm mb-4 md:mb-6">Let me show you some options...</p>
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  {[
+                    { src: "/pinktop.jpg", alt: "Pink sleeveless top" },
+                    { src: "/pinktop2.jpg", alt: "Pink blouse" },
+                    { src: "/lovable-uploads/6e3bd16c-e1f7-4faf-ae2d-7b512efb914e.png", alt: "Pink casual top" },
+                    { src: "/pinktop4.jpg", alt: "Pink evening top" }
+                  ].map((item, i) => (
+                    <div key={i} className="aspect-square bg-neutral-700/50 rounded-lg md:rounded-xl overflow-hidden
+                      shadow-md hover:shadow-xl transition-all duration-300">
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

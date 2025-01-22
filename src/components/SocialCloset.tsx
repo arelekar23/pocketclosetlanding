@@ -38,16 +38,18 @@ export const SocialCloset = () => {
                   </div>
                 </div>
 
-                {/* Activity Bubbles - Adjusted for mobile */}
-                {/* Each bubble position is adjusted for better mobile visibility */}
+                {/* Activity Bubbles - Made rounder and more responsive */}
                 <div className="absolute top-1/3 left-1/4 md:left-1/3 group cursor-pointer z-10">
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 group-hover:bg-primary/30 transition-colors p-2">
-                      <div className="w-full h-full rounded-full bg-primary flex items-center justify-center">
-                        <Heart className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/20 group-hover:bg-primary/30 
+                      transition-all duration-300 flex items-center justify-center">
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary 
+                        flex items-center justify-center shadow-lg">
+                        <Heart className="w-4 h-4 md:w-5 md:h-5 text-white" />
                       </div>
                     </div>
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl shadow-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl shadow-lg p-3 
+                      opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                       <p className="text-sm font-medium whitespace-nowrap">3 items shared nearby</p>
                     </div>
                   </div>
@@ -55,12 +57,15 @@ export const SocialCloset = () => {
 
                 <div className="absolute top-1/4 right-1/5 md:right-1/4 group cursor-pointer z-10">
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-accent/20 group-hover:bg-accent/30 transition-colors p-2">
-                      <div className="w-full h-full rounded-full bg-accent flex items-center justify-center">
-                        <DollarSign className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/20 group-hover:bg-accent/30 
+                      transition-all duration-300 flex items-center justify-center">
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-accent 
+                        flex items-center justify-center shadow-lg">
+                        <DollarSign className="w-4 h-4 md:w-5 md:h-5 text-white" />
                       </div>
                     </div>
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl shadow-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl shadow-lg p-3 
+                      opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                       <p className="text-sm font-medium whitespace-nowrap">5 items for sale</p>
                     </div>
                   </div>
@@ -68,12 +73,15 @@ export const SocialCloset = () => {
 
                 <div className="absolute bottom-1/4 right-1/4 md:right-1/3 group cursor-pointer z-10">
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-secondary/20 group-hover:bg-secondary/30 transition-colors p-2">
-                      <div className="w-full h-full rounded-full bg-secondary flex items-center justify-center">
-                        <Share2 className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary/20 group-hover:bg-secondary/30 
+                      transition-all duration-300 flex items-center justify-center">
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-secondary 
+                        flex items-center justify-center shadow-lg">
+                        <Share2 className="w-4 h-4 md:w-5 md:h-5 text-white" />
                       </div>
                     </div>
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl shadow-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl shadow-lg p-3 
+                      opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                       <p className="text-sm font-medium whitespace-nowrap">2 rental requests</p>
                     </div>
                   </div>
@@ -87,6 +95,41 @@ export const SocialCloset = () => {
                       w-10 h-10 md:w-12 md:h-12 rounded-full bg-white shadow-lg 
                       flex items-center justify-center">
                       <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Map Legend - Inside Map */}
+                <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 rounded-b-2xl">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
+                        <Heart className="w-3 h-3 text-primary" />
+                      </div>
+                      <p className="text-xs text-gray-800">
+                        <span className="font-medium">Shared Items</span>
+                        <span className="hidden sm:inline"> • Community shares</span>
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center">
+                        <DollarSign className="w-3 h-3 text-accent" />
+                      </div>
+                      <p className="text-xs text-gray-800">
+                        <span className="font-medium">Items for Sale</span>
+                        <span className="hidden sm:inline"> • Available now</span>
+                      </p>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center">
+                        <Share2 className="w-3 h-3 text-secondary" />
+                      </div>
+                      <p className="text-xs text-gray-800">
+                        <span className="font-medium">Rental Requests</span>
+                        <span className="hidden sm:inline"> • Available to rent</span>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -110,14 +153,11 @@ export const SocialCloset = () => {
                 from-primary/10 transition-all duration-300 shadow-lg">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 
-                    flex items-center justify-center shrink-0 scale-110 transition-transform duration-300">
+                    flex items-center justify-center shrink-0">
                     <Users className="w-5 h-5 md:w-6 md:h-6 text-primary animate-pulse" />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <h4 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Local Fashion Community</h4>
-                      <ChevronRight className="w-5 h-5 text-primary transform translate-x-1" />
-                    </div>
+                    <h4 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Local Fashion Community</h4>
                     <p className="text-sm md:text-base text-gray-700">
                       Connect with fashion enthusiasts in your area. Share styles, get inspiration, and build your network.
                     </p>
@@ -125,8 +165,8 @@ export const SocialCloset = () => {
                       <span>150+ users nearby</span>
                       <div className="flex -space-x-2">
                         {[...Array(3)].map((_, i) => (
-                          <div key={i} className={`w-6 h-6 rounded-full border-2 border-white 
-                            bg-primary/20 flex items-center justify-center`}>
+                          <div key={i} className="w-6 h-6 rounded-full border-2 border-white 
+                            bg-primary/20 flex items-center justify-center">
                             <Users className="w-3 h-3 text-primary" />
                           </div>
                         ))}
@@ -145,14 +185,11 @@ export const SocialCloset = () => {
                 from-accent/10 transition-all duration-300 shadow-lg">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-accent/10 
-                    flex items-center justify-center shrink-0 scale-110 transition-transform duration-300">
+                    flex items-center justify-center shrink-0">
                     <ShoppingCart className="w-5 h-5 md:w-6 md:h-6 text-accent animate-pulse" />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <h4 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Buy & Sell</h4>
-                      <ChevronRight className="w-5 h-5 text-accent transform translate-x-1" />
-                    </div>
+                    <h4 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Buy & Sell</h4>
                     <p className="text-sm md:text-base text-gray-700">
                       Trade fashion items with verified users in your area. Safe, secure, and sustainable shopping.
                     </p>
@@ -174,14 +211,11 @@ export const SocialCloset = () => {
                 from-indigo-500/10 transition-all duration-300 shadow-lg">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-indigo-500/10 
-                    flex items-center justify-center shrink-0 scale-110 transition-transform duration-300">
+                    flex items-center justify-center shrink-0">
                     <Share2 className="w-5 h-5 md:w-6 md:h-6 text-indigo-500 animate-pulse" />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <h4 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Rent & Share</h4>
-                      <ChevronRight className="w-5 h-5 text-indigo-500 transform translate-x-1" />
-                    </div>
+                    <h4 className="text-base md:text-lg font-semibold mb-1 md:mb-2">Rent & Share</h4>
                     <p className="text-sm md:text-base text-gray-700">
                       Rent designer pieces or share your collection. Perfect for special occasions and trying new styles.
                     </p>

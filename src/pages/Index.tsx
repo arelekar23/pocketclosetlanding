@@ -10,7 +10,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <AiFeatures />
-      <SocialCloset />
+      {/* <SocialCloset /> */}
       <Footer />
     </div>
   );
