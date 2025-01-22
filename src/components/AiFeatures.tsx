@@ -56,7 +56,7 @@ export const AiFeatures = () => {
         {/* AI Features Grid */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
           {/* Left Side - Chat Demo */}
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden pb-0">
             <div className="relative">
               <img
                 src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
@@ -65,7 +65,7 @@ export const AiFeatures = () => {
               />
               
               {/* AI Chat Interface */}
-              <div className="p-4 pb-0">
+              <div className="p-4">
                 {/* User Message */}
                 <div className="flex justify-end gap-3 mb-3">
                   <div className="p-4 bg-primary/10 backdrop-blur-sm rounded-2xl rounded-tr-none">
