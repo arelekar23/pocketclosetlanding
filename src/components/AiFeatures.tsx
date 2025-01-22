@@ -65,7 +65,7 @@ export const AiFeatures = () => {
               />
               
               {/* AI Chat Interface */}
-              <div className="p-4 pb-0">
+              <div className="p-4">
                 {/* User Message */}
                 <div className="flex justify-end gap-3 mb-3">
                   <div className="p-4 bg-primary/10 backdrop-blur-sm rounded-2xl rounded-tr-none">
