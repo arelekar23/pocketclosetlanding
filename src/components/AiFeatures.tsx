@@ -56,7 +56,7 @@ export const AiFeatures = () => {
         {/* AI Features Grid */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
           {/* Left Side - Chat Demo */}
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden pb-0">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
             <div className="relative">
               <img
                 src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
@@ -101,7 +101,7 @@ export const AiFeatures = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap gap-2 mb-0">
+                    <div className="flex flex-wrap gap-2">
                       {["Weather-Ready", "Layered", "Cozy"].map((tag) => (
                         <span key={tag} className="px-3 py-1 bg-primary/10 rounded-full text-sm text-primary">
                           {tag}
@@ -114,7 +114,6 @@ export const AiFeatures = () => {
             </div>
           </div>
 
-          {/* Right Side Features */}
           <div className="space-y-6">
             {/* Visual Search Feature */}
             <div className="bg-white p-6 rounded-3xl shadow-lg">
