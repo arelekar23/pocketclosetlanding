@@ -41,10 +41,10 @@ export const AiFeatures = () => {
   }, [activeMessage, typeMessage]);
 
   return (
-    <section className="pt-16 pb-12 md:pt-24 md:pb-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="pt-16 pb-12 md:pt-24 md:pb-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Title Section */}
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mx-auto mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             AI-Powered Wardrobe Assistant
           </h2>
@@ -53,72 +53,73 @@ export const AiFeatures = () => {
           </p>
         </div>
 
-        {/* AI Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
-          {/* Left Side - Chat Demo */}
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden pb-0">
-            <div className="relative">
-              <img
-                src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
-                alt="Sparkly silver dress"
-                className="w-full h-[400px] object-cover"
-              />
-              
-              {/* AI Chat Interface */}
-              <div className="p-4">
-                {/* User Message */}
-                <div className="flex justify-end gap-3 mb-3">
-                  <div className="p-4 bg-primary/10 backdrop-blur-sm rounded-2xl rounded-tr-none">
-                    <p className="text-gray-800 text-sm">
-                      How can I improve this outfit for the weather tonight?
-                    </p>
-                  </div>
-                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                    <Users className="w-4 h-4 text-primary" />
-                  </div>
+        {/* AI Features Stack */}
+        <div className="flex flex-col gap-6 max-w-3xl mx-auto">
+          {/* Chat Demo */}
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden h-fit">
+            {/* Main Image */}
+            <img
+              src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
+              alt="Sparkly silver dress"
+              className="w-full h-[400px] object-cover"
+            />
+            
+            {/* Chat Interface */}
+            <div className="p-4">
+              {/* User Message */}
+              <div className="flex justify-end gap-3 mb-2">
+                <div className="p-3 bg-primary/10 backdrop-blur-sm rounded-2xl rounded-tr-none max-w-[80%]">
+                  <p className="text-gray-800 text-sm">
+                    How can I improve this outfit for the weather tonight?
+                  </p>
                 </div>
+                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <Users className="w-4 h-4 text-primary" />
+                </div>
+              </div>
 
-                {/* AI Response */}
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                    <Brain className="w-4 h-4 text-white" />
+              {/* AI Response */}
+              <div className="flex gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <Brain className="w-4 h-4 text-white" />
+                </div>
+                <div className="flex-1 p-3 bg-white shadow-sm rounded-2xl rounded-tl-none">
+                  {/* AI Text Response */}
+                  <p className="text-gray-800 text-sm mb-3">
+                    {displayedText}
+                    {isTyping && <span className="animate-pulse">|</span>}
+                  </p>
+                  
+                  {/* Suggested Item */}
+                  <div className="mb-2">
+                    <div className="max-w-[180px] aspect-square bg-neutral-100 rounded-lg overflow-hidden
+                      shadow-sm hover:shadow-md transition-all duration-300">
+                      <img
+                        src="/furcoat.jpg"
+                        alt="Warm fur coat"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
                   </div>
-                  <div className="p-4 bg-white shadow-sm rounded-2xl rounded-tl-none">
-                    <p className="text-gray-800 text-sm mb-3">
-                      {displayedText}
-                      {isTyping && <span className="animate-pulse">|</span>}
-                    </p>
-                    
-                    {/* Single Suggested Item */}
-                    <div className="mb-3">
-                      <div className="aspect-square max-w-[200px] bg-neutral-100 rounded-lg overflow-hidden
-                        shadow-sm hover:shadow-md transition-all duration-300">
-                        <img
-                          src="/furcoat.jpg"
-                          alt="Warm fur coat"
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
 
-                    <div className="flex flex-wrap gap-2 mb-0">
-                      {["Weather-Ready", "Layered", "Cozy"].map((tag) => (
-                        <span key={tag} className="px-3 py-1 bg-primary/10 rounded-full text-sm text-primary">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {["Weather-Ready", "Layered", "Cozy"].map((tag) => (
+                      <span key={tag} className="px-2.5 py-0.5 bg-primary/10 rounded-full text-xs text-primary">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Side Features */}
-          <div className="space-y-6">
+          {/* Visual Search and Easy Upload Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
             {/* Visual Search Feature */}
             <div className="bg-white p-6 rounded-3xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Visual Search</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Visual Search</h3>
               <div className="space-y-3">
                 <div className="group p-4 bg-gray-50 rounded-xl">
                   <div className="flex items-center gap-3">
@@ -134,8 +135,8 @@ export const AiFeatures = () => {
 
             {/* Easy Upload Feature */}
             <div className="bg-white p-6 rounded-3xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Easy Upload</h3>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Easy Upload</h3>
+              <div className="flex flex-wrap gap-2 justify-center">
                 <button className="flex items-center gap-2 px-4 py-2 bg-secondary/30 rounded-full text-sm">
                   <Camera className="w-4 h-4 text-primary" />
                   <span>Camera</span>
@@ -150,119 +151,57 @@ export const AiFeatures = () => {
                 </button>
               </div>
             </div>
+          </div>
 
-            {/* Local Fashion Community with Map */}
-            <div className="bg-white p-6 rounded-3xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Discover Local Fashion Community</h3>
-              <p className="text-gray-600 text-sm mb-6">
-                Connect with fashion enthusiasts in your area. Browse, shop, and rent from curated closets near you.
-              </p>
-              
-              {/* Features Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="flex items-start gap-2 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all duration-300">
-                  <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center shrink-0
-                    group-hover:scale-110 transition-transform duration-300">
-                    <ShoppingCart className="w-4 h-4 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold mb-1">Shop Local</h4>
-                    <p className="text-xs text-gray-600">Buy pre-loved fashion items</p>
-                  </div>
+          {/* Local Fashion Community */}
+          <div className="bg-white p-6 rounded-3xl shadow-lg">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Discover Local Fashion Community</h3>
+            <p className="text-gray-600 text-sm mb-6 text-center">
+              Connect with fashion enthusiasts in your area. Browse, shop, and rent from curated closets near you.
+            </p>
+            
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="flex items-start gap-2 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all duration-300">
+                <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center shrink-0
+                  group-hover:scale-110 transition-transform duration-300">
+                  <ShoppingCart className="w-4 h-4 text-primary" />
                 </div>
-
-                <div className="flex items-start gap-2 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all duration-300">
-                  <div className="w-8 h-8 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0
-                    group-hover:scale-110 transition-transform duration-300">
-                    <Share2 className="w-4 h-4 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold mb-1">Rent & Share</h4>
-                    <p className="text-xs text-gray-600">Borrow designer pieces</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-2 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all duration-300">
-                  <div className="w-8 h-8 rounded-xl bg-accent/10 flex items-center justify-center shrink-0
-                    group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-4 h-4 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold mb-1">Community</h4>
-                    <p className="text-xs text-gray-600">Connect with verified users</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-2 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all duration-300">
-                  <div className="w-8 h-8 rounded-xl bg-indigo-500/10 flex items-center justify-center shrink-0
-                    group-hover:scale-110 transition-transform duration-300">
-                    <MapPin className="w-4 h-4 text-indigo-500" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold mb-1">Local Discovery</h4>
-                    <p className="text-xs text-gray-600">Find nearby unique pieces</p>
-                  </div>
+                <div>
+                  <h4 className="text-sm font-semibold mb-1">Shop Local</h4>
+                  <p className="text-xs text-gray-600">Buy pre-loved fashion items</p>
                 </div>
               </div>
 
-              {/* Interactive Map */}
-              <div className="aspect-square relative bg-gray-50 rounded-2xl overflow-hidden">
-                <img 
-                  src="/map-background1.png" 
-                  alt="Map showing local closets" 
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-                
-                {/* Location Indicator */}
-                <div className="absolute top-4 right-4 group z-20">
-                  <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 
-                    rounded-full shadow-lg hover:bg-white transition-all duration-300 cursor-pointer">
-                    <Navigation className="w-4 h-4 text-primary animate-pulse" />
-                    <span className="text-sm font-medium text-gray-800">Boston</span>
-                  </div>
+              <div className="flex items-start gap-2 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all duration-300">
+                <div className="w-8 h-8 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0
+                  group-hover:scale-110 transition-transform duration-300">
+                  <Share2 className="w-4 h-4 text-secondary" />
                 </div>
-
-                {/* Activity Bubbles - Centered */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-8 z-10">
-                  {[
-                    { icon: Heart, color: "primary", count: "3", label: "shared items", position: "-translate-y-12" },
-                    { icon: ShoppingCart, color: "accent", count: "5", label: "for sale", position: "translate-x-12" },
-                    { icon: Share2, color: "secondary", count: "2", label: "rentals", position: "-translate-y-12 translate-x-24" }
-                  ].map((item, i) => (
-                    <div key={i} className={`group cursor-pointer ${item.position}`}>
-                      <div className="relative">
-                        <div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center
-                          hover:scale-110 transition-all duration-300">
-                          <div className={`w-10 h-10 rounded-full bg-${item.color}/20 hover:bg-${item.color}/30 
-                            flex items-center justify-center transition-all duration-300`}>
-                            <item.icon className={`w-5 h-5 text-${item.color}`} />
-                          </div>
-                        </div>
-                        <div className="absolute left-1/2 -translate-x-1/2 mt-2 pointer-events-none
-                          bg-white rounded-lg shadow-lg px-3 py-1.5 opacity-0 group-hover:opacity-100 
-                          transition-opacity whitespace-nowrap top-full">
-                          <p className="text-sm">
-                            <span className="font-medium">{item.count}</span> {item.label}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                <div>
+                  <h4 className="text-sm font-semibold mb-1">Rent & Share</h4>
+                  <p className="text-xs text-gray-600">Borrow designer pieces</p>
                 </div>
+              </div>
 
-                {/* Stats Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-4 rounded-t-2xl">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                        <Heart className="w-5 h-5 text-primary" />
-                      </div>
-                      <p className="text-sm font-medium">150+ closets near you</p>
-                    </div>
-                    <button className="text-sm text-primary font-medium hover:underline">
-                      View All
-                    </button>
-                  </div>
+              <div className="flex items-start gap-2 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all duration-300">
+                <div className="w-8 h-8 rounded-xl bg-accent/10 flex items-center justify-center shrink-0
+                  group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-4 h-4 text-accent" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold mb-1">Community</h4>
+                  <p className="text-xs text-gray-600">Connect with verified users</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all duration-300">
+                <div className="w-8 h-8 rounded-xl bg-indigo-500/10 flex items-center justify-center shrink-0
+                  group-hover:scale-110 transition-transform duration-300">
+                  <MapPin className="w-4 h-4 text-indigo-500" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold mb-1">Local Discovery</h4>
+                  <p className="text-xs text-gray-600">Find nearby unique pieces</p>
                 </div>
               </div>
             </div>

@@ -40,14 +40,14 @@ export const Hero = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-8 md:pt-20">
+    <div className="min-h-screen bg-white pt-8 md:pt-20">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 relative z-10 pb-8 md:pb-12">
           {/* Right Side - Content (appears first on mobile) */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-8 p-4 md:p-6
             order-1 md:order-2 mt-12 sm:mt-16 md:mt-0">
             <div className="space-y-4 md:space-y-6 mb-4 md:mb-0 pt-12 sm:pt-16 md:pt-0">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white group text-center md:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 group text-center md:text-left">
                 See what's in your{" "}
                 <span className="relative inline-block">
                   closet{" "}
@@ -59,7 +59,7 @@ export const Hero = () => {
                 </span>
               </h1>
               
-              <p className="text-base md:text-lg text-gray-300 text-center md:text-left">
+              <p className="text-base md:text-lg text-gray-600 text-center md:text-left">
                 Organize your wardrobe, discover your style, and share with friends.
               </p>
             </div>
@@ -74,9 +74,9 @@ export const Hero = () => {
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 border-2 border-primary bg-white/10 text-white h-[45px] 
+                    className="flex-1 border-2 border-primary bg-black/5 text-gray-900 h-[45px] 
                       placeholder:text-gray-400 focus:bg-white/20 transition-all duration-300
-                      pr-10 hover:bg-white/15 w-full"
+                      pr-10 hover:bg-black/10 w-full"
                     required
                     disabled={isSubmitting}
                   />
@@ -84,7 +84,7 @@ export const Hero = () => {
                 </div>
                 <Button 
                   type="submit"
-                  className="bg-white hover:bg-gray-100 text-black font-semibold px-4 h-[45px]
+                  className="bg-black hover:bg-gray-900 text-white font-semibold px-4 h-[45px]
                     flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
                     hover:shadow-primary/20 w-full justify-center"
                   disabled={isSubmitting}
@@ -112,7 +112,7 @@ export const Hero = () => {
           </div>
 
           {/* Left Side - Chat Interface (appears second on mobile) */}
-          <div className="bg-neutral-800/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl
+          <div className="bg-black rounded-2xl p-4 md:p-6 shadow-xl
             order-2 md:order-1 mt-6 md:mt-0">
             {/* User Message */}
             <div className="flex justify-end gap-2 md:gap-3 mb-4 md:mb-6">
