@@ -53,30 +53,30 @@ export const AiFeatures = () => {
           </p>
         </div>
 
-        {/* AI Features Stack */}
-        <div className="flex flex-col gap-6 max-w-3xl mx-auto">
-          {/* Chat Demo */}
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden h-fit">
-            {/* Main Image */}
-            <img
-              src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
-              alt="Sparkly silver dress"
-              className="w-full h-[400px] object-cover"
-            />
-            
-            {/* Chat Interface */}
-            <div className="p-4">
-              {/* User Message */}
-              <div className="flex justify-end gap-3 mb-2">
-                <div className="p-3 bg-primary/10 backdrop-blur-sm rounded-2xl rounded-tr-none max-w-[80%]">
-                  <p className="text-gray-800 text-sm">
-                    How can I improve this outfit for the weather tonight?
-                  </p>
+        {/* AI Features Grid */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
+          {/* Left Side - Chat Demo */}
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden pb-0">
+            <div className="relative">
+              <img
+                src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
+                alt="Sparkly silver dress"
+                className="w-full h-[400px] object-cover"
+              />
+              
+              {/* AI Chat Interface */}
+              <div className="p-4">
+                {/* User Message */}
+                <div className="flex justify-end gap-3 mb-3">
+                  <div className="p-4 bg-primary/10 backdrop-blur-sm rounded-2xl rounded-tr-none">
+                    <p className="text-gray-800 text-sm">
+                      How can I improve this outfit for the weather tonight?
+                    </p>
+                  </div>
+                  <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                    <Users className="w-4 h-4 text-primary" />
+                  </div>
                 </div>
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                  <Users className="w-4 h-4 text-primary" />
-                </div>
-              </div>
 
               {/* AI Response */}
               <div className="flex gap-3">
@@ -102,21 +102,21 @@ export const AiFeatures = () => {
                     </div>
                   </div>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {["Weather-Ready", "Layered", "Cozy"].map((tag) => (
-                      <span key={tag} className="px-2.5 py-0.5 bg-primary/10 rounded-full text-xs text-primary">
-                        {tag}
-                      </span>
-                    ))}
+                    <div className="flex flex-wrap gap-2 mb-0">
+                      {["Weather-Ready", "Layered", "Cozy"].map((tag) => (
+                        <span key={tag} className="px-3 py-1 bg-primary/10 rounded-full text-sm text-primary">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Visual Search and Easy Upload Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* Right Side Features */}
+          <div className="space-y-6">
             {/* Visual Search Feature */}
             <div className="bg-white p-6 rounded-3xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Visual Search</h3>
