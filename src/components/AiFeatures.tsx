@@ -2,9 +2,9 @@ import { Upload, Search, Tags, Brain, Camera, Smartphone, Users, ShoppingCart, S
 import { useState, useEffect, useCallback } from "react";
 
 const AI_MESSAGES = [
-  "Based on tonight's forecast (62°F with light rain), I recommend adding a light jacket and switching to closed-toe shoes. Here are some options from your closet:",
-  "For tonight's weather, you might want to add a waterproof layer. I found these matching pieces in your wardrobe:",
-  "The temperature will drop to 58°F tonight. Consider adding these warm accessories from your collection:",
+  "For your dinner date tonight, I've put together this elegant outfit from your closet. The weather will be perfect (68°F), so this combination will keep you comfortable and stylish.",
+  "I've selected this sophisticated ensemble based on your style preferences and the restaurant's dress code. The forecast shows clear skies and mild temperatures.",
+  "This outfit from your wardrobe is perfect for a romantic dinner. The current temperature is 70°F with a gentle breeze, ideal for this look.",
 ];
 
 export const AiFeatures = () => {
@@ -57,18 +57,20 @@ export const AiFeatures = () => {
         <div className="flex flex-col gap-6 max-w-3xl mx-auto">
           {/* Chat Demo Box */}
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden h-fit">
-            <img
-              src="/lovable-uploads/d56eb6dc-a221-40c5-848a-572d38153771.png"
-              alt="Sparkly silver dress"
-              className="w-full h-[400px] object-cover"
-            />
+            <div className="w-full h-auto flex items-center justify-center bg-gray-50">
+              <img
+                src="/Outfit.png"
+                alt="AI recommended outfit"
+                className="w-full h-auto object-contain max-h-[500px] py-4"
+              />
+            </div>
             
             <div className="p-4">
               {/* User Message */}
               <div className="flex justify-end gap-3 mb-3">
                 <div className="p-4 bg-primary/10 backdrop-blur-sm rounded-2xl rounded-tr-none">
                   <p className="text-gray-800 text-sm">
-                    How can I improve this outfit for the weather tonight?
+                    What should I wear for my dinner date tonight?
                   </p>
                 </div>
                 <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
@@ -87,21 +89,9 @@ export const AiFeatures = () => {
                     {displayedText}
                     {isTyping && <span className="animate-pulse">|</span>}
                   </p>
-                  
-                  {/* Suggested Item */}
-                  <div className="mb-2">
-                    <div className="max-w-[180px] aspect-square bg-neutral-100 rounded-lg overflow-hidden
-                      shadow-sm hover:shadow-md transition-all duration-300">
-                      <img
-                        src="/furcoat.jpg"
-                        alt="Warm fur coat"
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  </div>
 
                   <div className="flex flex-wrap gap-2 mb-0">
-                    {["Weather-Ready", "Layered", "Cozy"].map((tag) => (
+                    {["Perfect for Date Night", "Weather-Appropriate", "Elegant"].map((tag) => (
                       <span key={tag} className="px-3 py-1 bg-primary/10 rounded-full text-sm text-primary">
                         {tag}
                       </span>
