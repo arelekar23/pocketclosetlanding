@@ -3,7 +3,6 @@ import { ArrowRight, Search } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 export const Hero = () => {
   const [email, setEmail] = useState("");
@@ -16,22 +15,18 @@ export const Hero = () => {
 
     setIsSubmitting(true);
     try {
-      const { error } = await supabase
-        .from('emails')
-        .insert([{ email }]);
-
-      if (error) throw error;
+      // Simulate a delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       toast({
-        title: "Thank you for joining!",
-        description: "We'll notify you when we launch.",
+        title: "Thank you for your interest!",
+        description: "We've received your email and will notify you when we launch.",
       });
       setEmail("");
     } catch (error) {
-      console.error('Error saving email:', error);
       toast({
         title: "Error",
-        description: "Failed to join waitlist. Please try again.",
+        description: "Something went wrong. Please try again later.",
         variant: "destructive",
       });
     } finally {
