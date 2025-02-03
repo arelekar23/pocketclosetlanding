@@ -44,19 +44,19 @@ export const AiFeatures = () => {
     <section className="pt-16 pb-12 md:pt-24 md:pb-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Title Section */}
-        <div className="max-w-2xl mx-auto mb-16 text-center">
+        {/* <div className="max-w-2xl mx-auto mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             AI-Powered Wardrobe Assistant
           </h2>
           <p className="text-lg text-gray-600">
             Experience the future of wardrobe management with our intelligent AI features.
           </p>
-        </div>
+        </div> */}
 
         {/* AI Features Stack */}
-        <div className="flex flex-col gap-6 max-w-3xl mx-auto">
+        {/* <div className="flex flex-col gap-6 max-w-3xl mx-auto"> */}
           {/* Chat Demo Box */}
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden h-fit">
+          {/* <div className="bg-white rounded-3xl shadow-xl overflow-hidden h-fit">
             <div className="w-full h-auto flex items-center justify-center bg-gray-50">
               <img
                 src="/Outfit.png"
@@ -65,9 +65,9 @@ export const AiFeatures = () => {
               />
             </div>
             
-            <div className="p-4">
+            <div className="p-4"> */}
               {/* User Message */}
-              <div className="flex justify-end gap-3 mb-3">
+              {/* <div className="flex justify-end gap-3 mb-3">
                 <div className="p-4 bg-primary/10 backdrop-blur-sm rounded-2xl rounded-tr-none">
                   <p className="text-gray-800 text-sm">
                     What should I wear for my dinner date tonight?
@@ -76,16 +76,16 @@ export const AiFeatures = () => {
                 <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                   <Users className="w-4 h-4 text-primary" />
                 </div>
-              </div>
+              </div> */}
 
               {/* AI Response */}
-              <div className="flex gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+              {/* <div className="flex gap-3">
+                <div className="w-8 h-8 rounded-full bg-[#FF1493] flex items-center justify-center flex-shrink-0">
                   <Brain className="w-4 h-4 text-white" />
                 </div>
-                <div className="flex-1 p-3 bg-white shadow-sm rounded-2xl rounded-tl-none">
+                <div className="flex-1 p-3 bg-white shadow-sm rounded-2xl rounded-tl-none"> */}
                   {/* AI Text Response */}
-                  <p className="text-gray-800 text-sm mb-3">
+                  {/* <p className="text-gray-800 text-sm mb-3">
                     {displayedText}
                     {isTyping && <span className="animate-pulse">|</span>}
                   </p>
@@ -100,12 +100,12 @@ export const AiFeatures = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Visual Search and Easy Upload Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* <div className="grid md:grid-cols-2 gap-6"> */}
             {/* Visual Search Feature */}
-            <div className="bg-white p-6 rounded-3xl shadow-lg">
+            {/* <div className="bg-white p-6 rounded-3xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Visual Search</h3>
               <div className="space-y-3">
                 <div className="group p-4 bg-gray-50 rounded-xl">
@@ -118,10 +118,10 @@ export const AiFeatures = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Easy Upload Feature */}
-            <div className="bg-white p-6 rounded-3xl shadow-lg">
+            {/* <div className="bg-white p-6 rounded-3xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Easy Upload</h3>
               <div className="flex flex-wrap gap-2 justify-center">
                 <button className="flex items-center gap-2 px-4 py-2 bg-secondary/30 rounded-full text-sm">
@@ -138,10 +138,10 @@ export const AiFeatures = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Local Fashion Community */}
-          <div className="bg-white p-6 rounded-3xl shadow-lg">
+          {/* <div className="bg-white p-6 rounded-3xl shadow-lg">
             <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Discover Local Fashion Community</h3>
             <p className="text-gray-600 text-sm mb-6 text-center">
               Connect with fashion enthusiasts in your area. Browse, shop, and rent from curated closets near you.
@@ -192,9 +192,9 @@ export const AiFeatures = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 };

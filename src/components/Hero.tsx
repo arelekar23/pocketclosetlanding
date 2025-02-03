@@ -74,13 +74,13 @@ export const Hero = () => {
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 border-2 border-primary bg-black/5 text-gray-900 h-[45px] 
-                      placeholder:text-gray-400 focus:bg-white/20 transition-all duration-300
-                      pr-10 hover:bg-black/10 w-full"
+                    className="flex-1 border-2 border-[#FF1493] bg-black/5 text-gray-900 h-[45px] 
+                      placeholder:text-[#FF1493] focus:bg-white/20 transition-all duration-300
+                      pr-10 hover:bg-black/10 w-full focus:border-[#FF1493]"
                     required
                     disabled={isSubmitting}
                   />
-                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#FF1493]" />
                 </div>
                 <Button 
                   type="submit"
@@ -129,8 +129,8 @@ export const Hero = () => {
             {/* AI Response */}
             <div className="flex gap-2 md:gap-3">
               <div className="min-w-7 min-h-7 w-7 h-7 md:min-w-8 md:min-h-8 md:w-8 md:h-8 
-                rounded-full bg-gradient-to-br from-primary to-secondary 
-                flex items-center justify-center shadow-lg ring-2 ring-primary/20 flex-shrink-0">
+                rounded-full bg-gradient-to-br from-[#FF1493] to-[#FF69B4] 
+                flex items-center justify-center shadow-lg ring-2 ring-[#FF1493]/20 flex-shrink-0">
                 <span className="text-white text-[10px] font-bold tracking-wider">AI</span>
               </div>
               <div className="bg-white/10 rounded-2xl rounded-tl-none p-3 md:p-4 shadow-lg">

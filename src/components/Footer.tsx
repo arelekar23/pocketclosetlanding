@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Mail } from "lucide-react";
+import PocketClosetLogo from "./PocketClosetLogo.png";
 
 export const Footer = () => {
   return (
@@ -7,8 +8,9 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-bold text-lg mb-4">PocketCloset</h3>
+            <img src={PocketClosetLogo} alt="PocketCloset Logo" className="h-16 w-auto mb-4" />
             <p className="text-gray-600">
-   
+              Your smart wardrobe companion for effortless style management.
             </p>
           </div>
           <div>
