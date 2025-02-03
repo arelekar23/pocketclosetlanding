@@ -59,36 +59,33 @@ export const Hero = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="relative group max-w-md mx-auto md:mx-0">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent 
-                rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-              <div className="relative flex flex-col gap-3">
-                <div className="relative flex-1">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 border-2 border-[#FF1493] bg-black/5 text-gray-900 h-[45px] 
-                      placeholder:text-[#FF1493] focus:bg-white/20 transition-all duration-300
-                      pr-10 hover:bg-black/10 w-full focus:border-[#FF1493]"
-                    required
-                    disabled={isSubmitting}
-                  />
-                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#FF1493]" />
-                </div>
-                <Button 
-                  type="submit"
-                  className="bg-black hover:bg-gray-900 text-white font-semibold px-4 h-[45px]
-                    flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
-                    hover:shadow-primary/20 w-full justify-center"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Joining..." : "Join Waitlist"} 
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </div>
-            </form>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto md:mx-0">
+              <Button 
+                asChild
+                className="relative bg-[#FF1493] hover:bg-[#FF69B4] text-white font-semibold px-6 h-[45px]
+                  flex items-center gap-2 transition-all duration-300 hover:-translate-y-0.5
+                  justify-center flex-1 shadow-[0_0_15px_rgba(255,20,147,0.5)] hover:shadow-[0_0_25px_rgba(255,20,147,0.8)]
+                  border border-[#FF1493] hover:border-[#FF69B4]
+                  after:absolute after:inset-0 after:z-[-1] after:bg-[#FF1493] after:blur-lg after:opacity-50 after:transition-opacity
+                  hover:after:opacity-75"
+              >
+                <a href="https://tally.so/r/w4XOEp" target="_blank" rel="noopener noreferrer">
+                  Join Waitlist <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+
+              <Button 
+                asChild
+                className="relative bg-black hover:bg-gray-900 text-white font-semibold px-6 h-[45px]
+                  flex items-center gap-2 transition-all duration-300 hover:-translate-y-0.5
+                  justify-center flex-1 shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_25px_rgba(0,0,0,0.5)]
+                  border border-black hover:border-gray-900"
+              >
+                <a href="https://form.typeform.com/to/sG2lyQfe" target="_blank" rel="noopener noreferrer">
+                  Become a Fellow <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+            </div>
 
             <a 
               href="#" 
