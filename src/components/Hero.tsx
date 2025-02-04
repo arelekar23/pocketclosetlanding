@@ -69,7 +69,7 @@ export const Hero = () => {
                   after:absolute after:inset-0 after:z-[-1] after:bg-[#FF1493] after:blur-lg after:opacity-50 after:transition-opacity
                   hover:after:opacity-75"
               >
-                <a href="https://tally.so/r/w4XOEp" target="_blank" rel="noopener noreferrer">
+                <a href="https://form.typeform.com/to/sWdLDKOy" target="_blank" rel="noopener noreferrer">
                   Join Waitlist <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
