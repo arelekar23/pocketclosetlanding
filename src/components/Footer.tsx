@@ -14,20 +14,20 @@ export const Footer = () => {
             </p>
           </div>
           <div>
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+            {/* <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-600 hover:text-black">About Us</a></li>
               <li><a href="#" className="text-gray-600 hover:text-black">How It Works</a></li>
               <li><a href="#" className="text-gray-600 hover:text-black">Pricing</a></li>
               <li><a href="#" className="text-gray-600 hover:text-black">Contact</a></li>
-            </ul>
+            </ul> */}
           </div>
           <div>
             <h3 className="font-bold text-lg mb-4">Legal</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-600 hover:text-black">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black">Cookie Policy</a></li>
+              {/* <li><a href="#" className="text-gray-600 hover:text-black">Terms of Service</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-black">Cookie Policy</a></li> */}
             </ul>
           </div>
           <div>
