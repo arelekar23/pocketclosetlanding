@@ -37,7 +37,7 @@ export const Hero = () => {
   return (
     <div className="min-h-screen bg-white pt-8 md:pt-20">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 relative z-10 pb-8 md:pb-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 relative z-10 pb-4">
           {/* Right Side - Content (appears first on mobile) */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-8 p-4 md:p-6
             order-1 md:order-2 mt-12 sm:mt-16 md:mt-0">
@@ -82,7 +82,7 @@ export const Hero = () => {
                   border border-black hover:border-gray-900"
               >
                 <a href="https://form.typeform.com/to/sG2lyQfe" target="_blank" rel="noopener noreferrer">
-                  Become a Fellow <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  Become a Design Fellow <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
             </div>
