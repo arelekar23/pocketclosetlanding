@@ -20,14 +20,14 @@ export const About = () => {
             <img
               src="/mitlogo.png"
               alt="MIT"
-              className="h-full w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-full w-full object-contain hover:grayscale-0 transition-all duration-300"
             />
           </div>
           <div className="w-48 h-24 relative">
             <img
               src="/harvardlogo.jpg"
               alt="Harvard"
-              className="h-full w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-full w-full object-contain hover:grayscale-0 transition-all duration-300"
             />
           </div>
         </div>
