@@ -16,17 +16,17 @@ export const About = () => {
 
         {/* University Logos */}
         <div className="flex justify-center items-center gap-12 mb-16">
-          <div className="w-48 h-24 relative">
+        <div className="w-48 h-24 relative">
             <img
-              src="/mitlogo.png"
-              alt="MIT"
+              src="/harvardlogo.jpg"
+              alt="Harvard"
               className="h-full w-full object-contain hover:grayscale-0 transition-all duration-300"
             />
           </div>
           <div className="w-48 h-24 relative">
             <img
-              src="/harvardlogo.jpg"
-              alt="Harvard"
+              src="/mitlogo.png"
+              alt="MIT"
               className="h-full w-full object-contain hover:grayscale-0 transition-all duration-300"
             />
           </div>
@@ -45,9 +45,8 @@ export const About = () => {
               to create a revolutionary platform that transforms how people interact with their wardrobes.
             </p>
             <div className="flex flex-wrap gap-4">
-              <span className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium">AI Technology</span>
+              <span className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium">Aritficial Intelligence</span>
               <span className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium">Fashion Innovation</span>
-              <span className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium">MIT & Harvard</span>
             </div>
           </div>
 
