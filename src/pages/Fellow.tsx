@@ -19,7 +19,7 @@ export const Fellow = () => {
         <div className="max-w-3xl mx-auto mb-16">
           <div className="bg-gray-50 rounded-3xl p-8 mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-              The Design Fellow Role
+              The Role
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               As a Design Fellow, you'll play a crucial role in shaping PocketCloset's user experience 

@@ -10,7 +10,7 @@ export const Footer = () => {
             <h3 className="font-bold text-lg mb-4">PocketCloset</h3>
             <img src={PocketClosetLogo} alt="PocketCloset Logo" className="h-16 w-auto mb-4" />
             <p className="text-gray-600">
-              Your smart wardrobe companion for effortless style management.
+              Your smart wardrobe companion for effortless style.
             </p>
           </div>
           <div>

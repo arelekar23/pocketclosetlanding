@@ -36,10 +36,10 @@ export const About = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              MIT & Harvard Innovation
+              Harvard & MIT Innovation
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              PocketCloset emerged from the innovative ecosystem of MIT and Harvard, 
+              PocketCloset emerged from the innovative ecosystem of Harvard and MIT, 
               bringing together cutting-edge AI technology and fashion expertise. Our team 
               combines technical excellence with a deep understanding of the fashion industry 
               to create a revolutionary platform that transforms how people interact with their wardrobes.
@@ -73,9 +73,9 @@ export const About = () => {
               Our Vision
             </h2>
             <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto leading-relaxed">
-              We envision a future where managing your wardrobe is effortless, sustainable fashion is 
-              the norm, and every piece of clothing finds its perfect home. Through AI-powered 
-              organization and a connected community, we're making this vision a reality.
+              We believe in a future where managing your wardrobe is effortless and sustainable, where fashion is 
+              the norm and every piece of clothing finds its perfect home. Through AI-powered 
+              organization and a vibrant community, we're making our vision a reality.
             </p>
           </div>
         </div>
