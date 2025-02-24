@@ -22,11 +22,11 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact Us</h3>
             <a 
-              href="mailto:inquires@pocketcloset.com" 
+              href="mailto:contact@pocketcloset.com" 
               className="flex items-center gap-2 text-gray-600 hover:text-black"
             >
               <Mail className="w-5 h-5" />
-              <span>inquires@pocketcloset.com</span>
+              <span>contact@pocketcloset.com</span>
             </a>
           </div>
         </div>
