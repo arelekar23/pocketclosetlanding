@@ -8,6 +8,7 @@ import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { Fellow } from './pages/Fellow';
 import { About } from './pages/About';
+import { Analytics } from "@vercel/analytics/react"
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
         <Sonner />
       </Router>
     </TooltipProvider>
+    <Analytics />
   </QueryClientProvider>
 );
 
