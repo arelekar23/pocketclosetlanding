@@ -36,7 +36,7 @@ export const About = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Harvard & MIT Innovation
+              Harvard & MIT team
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               PocketCloset emerged from the innovative ecosystem of Harvard and MIT, 
